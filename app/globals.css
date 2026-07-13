@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background: #060508;
+  color: #ede6da;
+}
+
+/* Starfield: three parallax-less layers of box-shadow stars. Cheap, no JS. */
+.starfield::before,
+.starfield::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(1px 1px at 12% 22%, rgba(237, 230, 218, 0.55) 50%, transparent 50%),
+    radial-gradient(1px 1px at 78% 12%, rgba(237, 230, 218, 0.4) 50%, transparent 50%),
+    radial-gradient(1.5px 1.5px at 33% 68%, rgba(255, 217, 160, 0.4) 50%, transparent 50%),
+    radial-gradient(1px 1px at 61% 41%, rgba(237, 230, 218, 0.35) 50%, transparent 50%),
+    radial-gradient(1px 1px at 89% 79%, rgba(237, 230, 218, 0.45) 50%, transparent 50%),
+    radial-gradient(1.5px 1.5px at 8% 88%, rgba(255, 158, 61, 0.3) 50%, transparent 50%),
+    radial-gradient(1px 1px at 45% 9%, rgba(237, 230, 218, 0.3) 50%, transparent 50%),
+    radial-gradient(1px 1px at 96% 54%, rgba(237, 230, 218, 0.35) 50%, transparent 50%),
+    radial-gradient(1px 1px at 24% 45%, rgba(237, 230, 218, 0.25) 50%, transparent 50%),
+    radial-gradient(1px 1px at 70% 92%, rgba(255, 217, 160, 0.3) 50%, transparent 50%);
+  background-size: 900px 700px;
+  z-index: 0;
+}
+.starfield::after {
+  background-size: 1400px 1100px;
+  transform: rotate(180deg);
+  opacity: 0.6;
+}
+
+/* Accretion disk rings — Keplerian: inner orbits faster. */
+@keyframes orbit {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+/* Only the three rings animate — one composited transform each. Animating
+   all 83 tiles individually pegs the GPU (found the hard way). */
+.ring { animation: orbit linear infinite; will-change: transform; }
+.ring-0 { animation-duration: 120s; }
+.ring-1 { animation-duration: 200s; }
+.ring-2 { animation-duration: 320s; }
+
+/* Hovering the disk pauses the orbit so a plate can be inspected. */
+.disk:hover .ring {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ring { animation: none; }
+}
+
+::selection {
+  background: rgba(255, 158, 61, 0.35);
+}
