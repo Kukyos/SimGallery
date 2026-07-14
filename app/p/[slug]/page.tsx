@@ -105,19 +105,22 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
       )}
 
-      {/* Feedback */}
+      {/* AI review — the public feedback every participant asked for */}
       <section className="mt-10">
-        <h2 className="font-mono text-[11px] uppercase tracking-[0.3em] text-photon/80">
-          observation notes
-        </h2>
         {e.feedback ? (
-          <div className="mt-3 whitespace-pre-wrap rounded-lg border border-white/10 bg-panel/60 p-5 text-[15px] leading-relaxed text-ink/90">
-            {e.feedback}
+          <div
+            className="rounded-2xl border-[1.5px] border-ember bg-gradient-to-b from-ember/10 to-ember/[0.03] p-6"
+            style={{ boxShadow: "0 0 28px rgba(255,158,61,0.22), inset 0 0 34px rgba(255,158,61,0.05)" }}
+          >
+            <h2 className="flex items-center gap-2.5 font-mono text-[11px] uppercase tracking-[0.3em] text-ember">
+              <span aria-hidden className="text-sm">◈</span> AI review
+            </h2>
+            <div className="mt-4 whitespace-pre-wrap text-[15px] leading-relaxed text-ink/95">
+              {e.feedback}
+            </div>
           </div>
         ) : (
-          <p className="mt-3 font-mono text-sm text-dim">
-            Notes pending. This object is still under review.
-          </p>
+          <p className="font-mono text-sm text-dim">AI review pending. This object is still being examined.</p>
         )}
       </section>
 
