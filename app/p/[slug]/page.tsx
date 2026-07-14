@@ -116,7 +116,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           </div>
         ) : (
           <p className="mt-3 font-mono text-sm text-dim">
-            Notes pending — this object is still under review.
+            Notes pending. This object is still under review.
           </p>
         )}
       </section>

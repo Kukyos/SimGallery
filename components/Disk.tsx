@@ -1,4 +1,5 @@
 import Link from "next/link";
+import FadeImg from "@/components/FadeImg";
 import { entries, designation } from "@/lib/data";
 
 // The signature: an accretion disk built from every submission's screenshot.
@@ -6,9 +7,9 @@ import { entries, designation } from "@/lib/data";
 // counter-rotation. Pure CSS animation — no JS, respects reduced motion.
 
 const RINGS = [
-  { radius: 128, share: 0.24, size: 30 },
-  { radius: 180, share: 0.33, size: 33 },
-  { radius: 238, share: 0.43, size: 36 },
+  { radius: 168, share: 0.24, size: 38 },
+  { radius: 238, share: 0.33, size: 42 },
+  { radius: 314, share: 0.43, size: 47 },
 ];
 
 // Deterministic jitter so the disk looks organic but never shifts between builds.
@@ -31,10 +32,10 @@ export default function Disk() {
   });
 
   return (
-    <div className="disk relative mx-auto h-[420px] w-full max-w-[820px] select-none max-sm:h-[300px]">
+    <div className="disk relative mx-auto h-[560px] w-full max-w-[1080px] select-none max-sm:h-[330px]">
       {/* Tilted orbital plane */}
       <div
-        className="absolute left-1/2 top-1/2 h-0 w-0 max-sm:scale-[0.62]"
+        className="absolute left-1/2 top-1/2 h-0 w-0 max-sm:scale-[0.48]"
         style={{ transform: "translate(-50%, -50%) perspective(1100px) rotateX(64deg)" }}
       >
         {ringTiles.map((tiles, ri) => (
@@ -50,8 +51,7 @@ export default function Disk() {
                   className="absolute block overflow-hidden rounded-[3px] border border-photon/25 opacity-80 transition hover:z-20 hover:scale-150 hover:opacity-100 hover:border-photon"
                   style={{ left: x - size / 2, top: y - size / 2, width: size, height: size }}
                 >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={e.shot!} alt="" className="h-full w-full object-cover" loading="eager" />
+                  <FadeImg src={e.shot!} alt="" className="h-full w-full object-cover" loading="eager" decoding="async" />
                 </Link>
               );
             })}
@@ -67,7 +67,7 @@ export default function Disk() {
 
       {/* The hole itself: circular shadow + photon ring, screen-space like a real BH */}
       <div
-        className="pointer-events-none absolute left-1/2 top-1/2 h-[120px] w-[120px] -translate-x-1/2 -translate-y-1/2 rounded-full max-sm:h-[80px] max-sm:w-[80px]"
+        className="pointer-events-none absolute left-1/2 top-1/2 h-[150px] w-[150px] -translate-x-1/2 -translate-y-1/2 rounded-full max-sm:h-[84px] max-sm:w-[84px]"
         style={{
           background: "radial-gradient(circle, #000 62%, rgba(6,5,8,0.85) 74%, transparent 100%)",
           boxShadow:

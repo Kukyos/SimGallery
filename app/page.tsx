@@ -19,12 +19,12 @@ export default function Home() {
         </div>
         <Disk />
         <h1 className="font-display mx-auto -mt-2 max-w-3xl text-4xl leading-[1.15] sm:text-5xl">
-          We pointed eighty-three school students at a black hole.
+          We pointed eighty-two builders at a black hole.
         </h1>
         <p className="mx-auto mt-4 max-w-xl text-[15px] leading-relaxed text-dim">
-          This is what fell into orbit. One workshop evening, one week of building, and every
-          simulation catalogued below — each tile in the disk above is a real project. Hover to
-          stop time; click to fall in.
+          This is what fell into orbit. One workshop, one week of building, and every simulation
+          catalogued below. Each tile in the disk is a real submission. Hover to stop time, click
+          to fall in.
         </p>
         <div className="mt-6 font-mono text-[11px] uppercase tracking-[0.25em] text-photon/70">
           {entries.length} objects · 7 days · 2 categories
@@ -40,8 +40,8 @@ export default function Home() {
               spectral analysis in progress
             </div>
             <p className="mx-auto mt-3 max-w-md text-sm text-dim">
-              Every submission is being reviewed against the official criteria — scientific
-              accuracy, design, and creativity. Winners will be catalogued here.
+              Every submission is being scored on scientific accuracy, design and creativity.
+              Winners will be catalogued here once the review is done.
             </p>
           </div>
         ) : (
@@ -102,8 +102,8 @@ export default function Home() {
         </div>
         {lateCount > 0 && (
           <p className="mt-8 font-mono text-[10px] leading-relaxed tracking-wider text-dim/80">
-            * REDSHIFTED — this object&apos;s light reached us after the submission deadline. Still
-            beautiful. Still catalogued.
+            * REDSHIFTED: this object&apos;s light reached us after the submission deadline.
+            Catalogued anyway.
           </p>
         )}
       </section>

@@ -10,7 +10,7 @@ const sans = IBM_Plex_Sans({ weight: ["400", "500", "600"], subsets: ["latin"], 
 export const metadata: Metadata = {
   title: "Simathon Deep Field",
   description:
-    "83 school students, one week, one black hole. The complete catalog of every simulation built at Simathon 2026.",
+    "82 builders, one week, one black hole. The complete catalog of every simulation built at Simathon 2026.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -21,7 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
           <footer className="border-t border-white/5 mt-24 py-10 text-center">
             <div className="font-mono text-[11px] tracking-[0.2em] uppercase text-dim">
-              Simathon · IIT Madras Research Park · July 2026
+              Simathon · YPAE Club · July 2026
             </div>
             <div className="text-sm text-dim mt-3">
               Organized by{" "}
@@ -33,7 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               >
                 Armaan
               </a>{" "}
-              · every simulation here was built by a school student in one week
+              · every simulation here was built in one week
             </div>
             <div className="mt-4">
               <Link href="/" className="font-mono text-[11px] text-dim hover:text-ink tracking-widest">
