@@ -107,7 +107,7 @@ function Plate({ e }: { e: Entry }) {
           {e.title}
         </div>
         <div className="mt-1 flex items-baseline justify-between gap-2">
-          <span className="text-[12px] text-dim">observed by {e.author}</span>
+          <span className="text-[12px] text-dim">built by {e.author}</span>
           {e.category && (
             <span className="shrink-0 font-mono text-[9px] uppercase tracking-widest text-dim">
               {CATEGORY_LABEL[e.category]}
