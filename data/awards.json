@@ -1,0 +1,144 @@
+{
+ "blackhole": {
+  "accuracy": [
+   {
+    "slug": "blackhole-sim",
+    "title": "blackhole sim",
+    "author": "Debarun Datta",
+    "value": 38,
+    "max": 40
+   },
+   {
+    "slug": "sign-of-the-space-times",
+    "title": "Sign of the (space)Times.",
+    "author": "Shreya N",
+    "value": 38,
+    "max": 40
+   },
+   {
+    "slug": "da-tummmmmm",
+    "title": "da tummmmmm",
+    "author": "yeltsa kcir",
+    "value": 37,
+    "max": 40
+   }
+  ],
+  "design": [
+   {
+    "slug": "wesker-a-real-time-sagittarius-a",
+    "title": "Wesker: A Real-Time Sagittarius A*",
+    "author": "Aryan Amrute",
+    "value": 24,
+    "max": 25
+   },
+   {
+    "slug": "a-majestic-blackhole-simulation",
+    "title": "A Majestic Blackhole Simulation",
+    "author": "Divya Jaiswal",
+    "value": 24,
+    "max": 25
+   },
+   {
+    "slug": "talk-to-this-black-hole-or-it-ll-die",
+    "title": "Talk to this black hole or it'll die",
+    "author": "Bhumik Khatwani",
+    "value": 22,
+    "max": 25
+   }
+  ],
+  "creativity": [
+   {
+    "slug": "talk-to-this-black-hole-or-it-ll-die",
+    "title": "Talk to this black hole or it'll die",
+    "author": "Bhumik Khatwani",
+    "value": 35,
+    "max": 35
+   },
+   {
+    "slug": "wesker-a-real-time-sagittarius-a",
+    "title": "Wesker: A Real-Time Sagittarius A*",
+    "author": "Aryan Amrute",
+    "value": 33,
+    "max": 35
+   },
+   {
+    "slug": "black-hole-accertion-disk",
+    "title": "Black Hole Accertion Disk",
+    "author": "Ayushi Barasiya",
+    "value": 30,
+    "max": 35
+   }
+  ]
+ },
+ "open": {
+  "accuracy": [
+   {
+    "slug": "cosmic-encounter-ultra-realistic-self-gr",
+    "title": "Cosmic Encounter: Ultra realistic Self-Gravitating Galaxy Collision",
+    "author": "Caroline Azevedo",
+    "value": 32,
+    "max": 40
+   },
+   {
+    "slug": "f16-flight-simulator",
+    "title": "F16 flight simulator",
+    "author": "Hridayesh Khetan",
+    "value": 30,
+    "max": 40
+   },
+   {
+    "slug": "physics-that-keeps-jupiters-asteriods-in",
+    "title": "physics that keeps jupiters asteriods in place",
+    "author": "PURVA KAKDE",
+    "value": 30,
+    "max": 40
+   }
+  ],
+  "design": [
+   {
+    "slug": "cosmic-encounter-ultra-realistic-self-gr",
+    "title": "Cosmic Encounter: Ultra realistic Self-Gravitating Galaxy Collision",
+    "author": "Caroline Azevedo",
+    "value": 23,
+    "max": 25
+   },
+   {
+    "slug": "f16-flight-simulator",
+    "title": "F16 flight simulator",
+    "author": "Hridayesh Khetan",
+    "value": 21,
+    "max": 25
+   },
+   {
+    "slug": "physics-that-keeps-jupiters-asteriods-in",
+    "title": "physics that keeps jupiters asteriods in place",
+    "author": "PURVA KAKDE",
+    "value": 21,
+    "max": 25
+   }
+  ],
+  "creativity": [
+   {
+    "slug": "f16-flight-simulator",
+    "title": "F16 flight simulator",
+    "author": "Hridayesh Khetan",
+    "value": 34,
+    "max": 35
+   },
+   {
+    "slug": "particle-collider",
+    "title": "Particle collider",
+    "author": "Priya Dharshini S",
+    "value": 30,
+    "max": 35
+   },
+   {
+    "slug": "quasar-quantum-wave-analysis-slit-simula",
+    "title": "QUASAR – Quantum Wave Analysis & Slit Simulation for Advanced Research",
+    "author": "ananyaraju.canraju06",
+    "value": 30,
+    "max": 35
+   }
+  ]
+ }
+}

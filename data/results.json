@@ -11,9 +11,9 @@
   "shot": "/shots/the-last-orbit.jpg",
   "observed": "2026-07-05T16:14:59.808505+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "Really strong physics for a particle simulation: your gravity uses the famous Paczyński–Wiita trick that correctly produces the innermost stable orbit, your spinning-hole formulas (horizon, ISCO, photon sphere) are the exact textbook ones, and your time-dilation clock rings are a genuinely great teaching idea. One hidden bug to learn from: your lensing formula is only correct at the default mass — change the mass slider and the deflection grows with mass *squared*. When AI hands you a formula with several symbols, ask \"which of these change when my slider moves, and is the formula still right?\""
  },
  {
   "slug": "sign-of-the-space-times",
@@ -27,9 +27,9 @@
   "shot": "/shots/sign-of-the-space-times.jpg",
   "observed": "2026-07-05T18:29:00.712615+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "One of the strongest physics entries of the whole hackathon. Your simulation doesn't just look like a spinning black hole — it actually bends every ray of light through the real Kerr spacetime equations, and best of all, it tests itself: we ran your built-in physics checks on our machine and every single one passed. That habit — asking your AI to \"write a test that checks a number physics already knows\" — is exactly how professionals catch AI-generated mistakes, and you're the only one who did it. To go further: ask for an energy-conservation check across a whole rendered frame, and try letting the disk particles move under real gravity instead of gliding on rails."
  },
  {
   "slug": "physics-of-chaos",
@@ -43,9 +43,9 @@
   "shot": "/shots/physics-of-chaos.jpg",
   "observed": "2026-07-06T05:30:50.05701+00:00",
   "isLate": false,
-  "category": null,
+  "category": "open",
   "winner": null,
-  "feedback": null
+  "feedback": "Your Lorenz attractor is flawless — correct equations, correct classic parameters, proper RK4, and you even discard the transient before plotting, a professional touch most people don't know about. The bonus black hole shows the same care. Since your core physics is small and perfect, the next move is scope: animate the trajectory live instead of freezing it, or show two butterflies diverging in real time. And ask your AI to verify the light-bending constant in your black hole sim against the known \"4GM/b\" answer — it looked close but unproven."
  },
  {
   "slug": "black-hole",
@@ -59,9 +59,9 @@
   "shot": "/shots/black-hole.jpg",
   "observed": "2026-07-06T09:44:20.500247+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "A genuinely excellent black hole renderer — the lensing, the shadow, the glowing ring are all computed by tracing light through real rotating-black-hole spacetime, not painted on. One catch to learn from: your on-screen overlay marks the \"photon sphere\" at a fixed radius that's only correct for a non-spinning hole, while your slider defaults to fast spin — so the label disagrees with your own (correct!) rendering. When AI gives you a formula, ask \"does this still hold when I change the spin slider?\" Checking formulas against your own controls is a great habit."
  },
  {
   "slug": "into-the-black-hole-a-visual-journey",
@@ -75,9 +75,9 @@
   "shot": "/shots/into-the-black-hole-a-visual-journey.jpg",
   "observed": "2026-07-07T03:42:19.134946+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "Excellent, honest work. Your ray bending uses the correct physics (the shadow and the glowing ring emerge from the math, not from paint), your disk uses the true relativistic speed formula that most entries get wrong, and — best of all — your code opens with a \"Physical Approximations & Limitations\" section that tells the truth about every shortcut. That's professional-grade honesty. Next challenge: replace the approximate bending force with full metric integration (\"ask your AI for Schwarzschild geodesics in Hamiltonian form\") and compare the two side by side."
  },
  {
   "slug": "kerr-blackhole",
@@ -91,9 +91,9 @@
   "shot": "/shots/kerr-blackhole.jpg",
   "observed": "2026-07-07T10:45:57.92012+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "Genuinely cinematic — the volumetric rendering craft (fog, tonemapping, camera work) is among the best in the field. The physics is set dressing though: the title says Kerr but there's no spin anywhere in the equations, the disk's Doppler formula is invented, and the constants disagree with each other (your disk's gas moves faster than light in your own units). Three questions to ask next time: \"does my spin parameter change anything?\", \"is this the standard Doppler formula?\", and \"are my mass and radius consistent?\" Your eye for visuals is real — pair it with formulas that are too."
  },
  {
   "slug": "p-gantua",
@@ -107,9 +107,9 @@
   "shot": "/shots/p-gantua.jpg",
   "observed": "2026-07-08T05:47:11.491021+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "Gorgeous presentation, and the formulas your header lists (Doppler factor, redshift, ISCO, disk temperature) are all real and correctly used for the disk's coloring. The honest gap: the lensing and the photon ring are screen-space effects — the ring is drawn where the math says it should be, rather than emerging from bent light (and the warp strength follows a different law than real deflection). Next time, ask your AI: \"is my lensing computed by integrating light paths, or by warping the final image?\" — and try the integrated version. Your shading pipeline is already good enough to deserve it."
  },
  {
   "slug": "cosmic-symphony-interactive-galaxy-colli",
@@ -123,9 +123,9 @@
   "shot": "/shots/cosmic-symphony-interactive-galaxy-colli.jpg",
   "observed": "2026-07-08T14:54:27.040465+00:00",
   "isLate": false,
-  "category": null,
+  "category": "open",
   "winner": null,
-  "feedback": null
+  "feedback": "Your galaxy collision does what the famous 1972 Toomre & Toomre paper did: the tidal tails in your simulation *emerge from real gravity*, not from effects — and your energy-coloring mode (bound gas blue, escaping gas hot) is honest instrumentation labeled exactly right in the comments. Lovely. Improvements to ask for: an exponential disk is great (you have it), next is a \"cloud-in-cell\" smoothing for less noisy gravity, and consider letting the stars pull on each other (see if your AI can add a simple particle-mesh solver). Your foundations are correct enough to build that on."
  },
  {
   "slug": "gravitational-lensing-simulation-black-h",
@@ -139,9 +139,9 @@
   "shot": "/shots/gravitational-lensing-simulation-black-h.jpg",
   "observed": "2026-07-09T09:41:22.99182+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "Good bones: your horizon formula for a spinning hole is exactly right and updates live with the spin slider, the frame-dragging term has the correct structure, and rays are genuinely marched through the scene. Three fixes to ask for: the bending force should depend on each ray's angular momentum (yours is a plain radial pull), your photon-sphere glow sits *inside* the horizon (a units slip — it belongs at 1.5× the Schwarzschild radius), and the Doppler is an invented linear formula. Each is a one-question fix: \"is this the standard formula, or an approximation you made up?\""
  },
  {
   "slug": "double-pendulum-chaos",
@@ -155,9 +155,9 @@
   "shot": "/shots/double-pendulum-chaos.jpg",
   "observed": "2026-07-09T10:48:32.305602+00:00",
   "isLate": false,
-  "category": null,
+  "category": "open",
   "winner": null,
-  "feedback": null
+  "feedback": "Textbook-perfect in the best way: we verified your double-pendulum equations term by term — every sign correct, full nonlinear versions, integrated with proper RK4 — and your chaos demo (two pendulums split by a thousandth of a degree) is exactly the right experiment. One inconsistency to learn from: your comment says the air drag divides by mass-times-length-squared, but the code divides only by mass. When the docstring and code disagree, one of them is wrong — ask your AI \"make the comment and code match, and tell me which was right.\" An energy graph would be the perfect next addition."
  },
  {
   "slug": "interactive-kerr-black-hole-simulator",
@@ -171,9 +171,9 @@
   "shot": "/shots/interactive-kerr-black-hole-simulator.jpg",
   "observed": "2026-07-09T10:57:23.491366+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "Your physics guide is genuinely excellent — the formulas in your sidebar (jet power, photon orbits, disk temperature with the full professional profile, ISCO) are all correct and better-sourced than almost any other entry's. But the 3D scene is a diorama: the photon ring is drawn geometry, the lensing is a screen warp with an inverse-square law that isn't the real one, and gravitational lensing is never chromatic (that comment is wrong physics). You clearly *know* the right equations — next time ask the AI to make the picture come *from* them: \"render this by integrating the geodesics in my guide.\""
  },
  {
   "slug": "cosmic-singularity-swirl-black-hole",
@@ -187,9 +187,9 @@
   "shot": "/shots/cosmic-singularity-swirl-black-hole.jpg",
   "observed": "2026-07-09T12:30:33.864549+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "An honest little gravity toy: correct softened inverse-square attraction, a stable integrator, and a fun anti-gravity finger — nothing fake, nothing overclaimed. Two easy upgrades: give particles sideways starting velocities so they *orbit* instead of plunging (one line: velocity perpendicular to radius, magnitude √(GM/r)), and name your file something.py — it's currently extensionless, which makes it awkward to run. From there, a Schwarzschild-radius label and a photon-ring marker would start the physics conversation."
  },
  {
   "slug": "interactive-black-hole-simulation",
@@ -203,9 +203,9 @@
   "shot": "/shots/interactive-black-hole-simulation.jpg",
   "observed": "2026-07-11T03:21:10.672343+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "Seriously impressive. Your simulation does the full rotating-black-hole math — even the orbiting particles follow real curved-spacetime paths, which almost nobody else attempted — and you built a debug mode that paints errors red on screen so you can see when the physics drifts. That instinct is gold. Next step: turn that visual debug mode into an automatic pass/fail test (\"ask your AI: make this print PASS or FAIL with a number\"), so you don't have to eyeball it. Also worth asking: \"does my Hawking radiation glow actually follow Hawking's formula, or is it just a purple light?\""
  },
  {
   "slug": "black-hole-vs-light",
@@ -219,9 +219,9 @@
   "shot": "/shots/black-hole-vs-light.jpg",
   "observed": "2026-07-11T04:18:48.437184+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "Beautiful physics. You used the most elegant known formulation of light around a spinning black hole (the same equations from the classic textbooks), and your disk brightness uses the real temperature profile that professional astrophysics papers use — a detail we saw almost nowhere else. The one wobble: inside the innermost stable orbit you reuse a formula that technically only works for stable circular orbits. Ask your AI: \"what actually happens to gas inside the ISCO, and what formula applies there?\" Also consider adding a small self-test — your math deserves proof it stays correct."
  },
  {
   "slug": "kerr-black-hole-simulator",
@@ -235,9 +235,9 @@
   "shot": "/shots/kerr-black-hole-simulator.jpg",
   "observed": "2026-07-11T05:35:46.937825+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "There's real physics in here — the correct pseudo-potential for the disk, the exact relativistic Doppler formula with the right geometry (rarer than you'd think), thin-disk brightness scaling — but it's trapped in a README: your entire program is pasted into the README file instead of committed as a .py, so nobody can run it, and the \"Author: Antigravity/Google DeepMind\" line is an AI byline left in. Lessons: always commit runnable files, always read what the AI signed. The physics deserved better packaging."
  },
  {
   "slug": "quantum-atom-explorer",
@@ -251,9 +251,9 @@
   "shot": "/shots/quantum-atom-explorer.jpg",
   "observed": "2026-07-11T08:15:31.445401+00:00",
   "isLate": false,
-  "category": null,
+  "category": "open",
   "winner": null,
-  "feedback": null
+  "feedback": "The only quantum entry, and it's exact: your electron clouds are drawn from the true hydrogen wavefunctions (we checked the normalization constants — perfect), sampled the statistically correct way, and you even color the wavefunction's positive and negative lobes differently, which is the detail chemistry teachers dream of. Next steps if you continue: ask your AI to animate a *superposition* of two orbitals (that's where quantum motion actually comes from), and be upfront that multi-electron atoms are approximated — hydrogen-like is a choice, and naming it is good science."
  },
  {
   "slug": "event-horizon",
@@ -267,9 +267,9 @@
   "shot": "/shots/event-horizon.jpg",
   "observed": "2026-07-11T10:10:00.971505+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "Top-tier work: real curved-spacetime ray tracing with a professional-grade adaptive solver, and you wrote physics tests — we ran them and they pass. One sharp lesson to take from this: your tests print \"Expected < 1e-6\" but actually accept larger errors, and your convergence test reports success even though the numbers never improved. AI wrote you tests that *look* rigorous but are softer than they claim — always ask \"would this test actually fail if the physics were wrong?\" and try breaking it on purpose. That's the final skill that turns good AI output into trustworthy science."
  },
  {
   "slug": "chirp-gravitational-wave-binary-coalesce",
@@ -283,9 +283,9 @@
   "shot": "/shots/chirp-gravitational-wave-binary-coalesce.jpg",
   "observed": "2026-07-11T10:30:34.851971+00:00",
   "isLate": false,
-  "category": null,
+  "category": "open",
   "winner": null,
-  "feedback": null
+  "feedback": "A standout idea beautifully grounded: you simulated the *sound* of spacetime, and the four formulas that matter — the orbital decay law, the frequency doubling, the energy loss rate, the merger cutoff — are all the correct leading-order physics that LIGO's textbooks start from. Playing the chirp through the speakers is exactly what real outreach scientists do. To tighten it: your units pass through several \"×10 to make it look right\" factors — ask your AI to carry real SI units end-to-end so the numbers on screen are true; and derive the ringdown tone from the final black hole's mass instead of hardcoding it."
  },
  {
   "slug": "blackhole-variable-optimized-simulator",
@@ -299,9 +299,9 @@
   "shot": "/shots/blackhole-variable-optimized-simulator.jpg",
   "observed": "2026-07-11T12:45:44.316059+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "Credit where due: the slider UI, FPS counter, and especially the portable zip with a start.bat so classmates can run it — that's thoughtful distribution nobody else did. But the physics layer is empty: the orbiters are parametric circles (no gravity anywhere), and the mass/charge/spin sliders scale one cosmetic warp. The mismatch between the Kerr-Newman-flavored labels and the decorative code is the thing to fix: ask your AI \"make the sliders change actual equations — orbital speed from mass, horizon size from spin and charge.\" Your packaging deserves a real engine inside it."
  },
  {
   "slug": "astralens-a-real-time-black-hole-simulat",
@@ -315,9 +315,9 @@
   "shot": "/shots/astralens-a-real-time-black-hole-simulat.jpg",
   "observed": "2026-07-11T14:10:21.322459+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "Strong art direction — the disk breathes, the grade is cinematic — but the physics is one real force (Newtonian gravity, correctly implemented) buried under five decorative ones, and the project named \"AstraLens\" contains no lensing: the black circle and its ring are painted in screen space. The honest question to ask your AI every time: \"which of these forces exist in physics, and which did you invent for looks?\" Keeping one invented force is a choice; not knowing which ones are invented is the trap. Your visual instincts are excellent — anchor them to one more real equation."
  },
  {
   "slug": "particle-collider",
@@ -331,9 +331,9 @@
   "shot": "/shots/particle-collider.jpg",
   "observed": "2026-07-11T15:34:42.672582+00:00",
   "isLate": false,
-  "category": null,
+  "category": "open",
   "winner": null,
-  "feedback": null
+  "feedback": "A fun and surprisingly physical accelerator: your magnetic force law is the real Lorentz force with correct charge behavior, your relativity factor for 7 TeV protons is the true number, and your collision debris uses the statistically correct way to spray particles in all directions. Where it's held together with tape: an invisible spring keeps the beam in orbit (in a real accelerator, the magnets do that job) and the \"luminosity\" counter is an invented formula. Ask your AI: \"can the magnetic field strength alone hold the beam at this radius — what field would it need?\" That question turns your visual into an experiment."
  },
  {
   "slug": "kerr-newman-black-hole-simulator",
@@ -347,9 +347,9 @@
   "shot": "/shots/kerr-newman-black-hole-simulator.jpg",
   "observed": "2026-07-11T17:10:42.814227+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "The visuals have real craft, and your five Fun Facts are all physically accurate — genuinely good science writing. The problem is the gap between the HUD and the code: the panel displays \"Kerr–Newman metric, spin 0.94, Hawking flux\" but none of those exist in the program — the spin does nothing, the flux is a sine wave, and the bending force is Newtonian with a tuned constant. Also, your Doppler brightening looks inverted (your own Fun Fact #5 states the correct rule your shader contradicts). Rule of thumb: every number on your HUD should trace back to a line of physics. Ask your AI \"which HUD values are computed vs decorative?\" — the honest version of this project would have scored much higher."
  },
  {
   "slug": "silly-orb",
@@ -363,9 +363,9 @@
   "shot": "/shots/silly-orb.jpg",
   "observed": "2026-07-11T17:21:47.339894+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "Heartbreaker of the hackathon: your README describes exactly the right physics (the correct light-bending equation, the honest reasoning about why the photon ring needs real ray winding, even a step-budget analysis) — but the shader files containing all of it were never committed. The repo can't run; we could only grade the essay and the host code. The lesson is worth the pain: after every push, clone your own repo somewhere fresh and run it. If those shaders still exist on your machine, push them — this reads like it was a top-third entry."
  },
  {
   "slug": "event-horizon-explorer-inspired-from-int",
@@ -379,9 +379,9 @@
   "shot": "/shots/event-horizon-explorer-inspired-from-int.jpg",
   "observed": "2026-07-11T18:05:46.996753+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "We loved the visible learning arc: five versions in one repo, from a flat particle disk to a real volumetric geodesic renderer, each better than the last — and your final version integrates genuine light bending with correct redshift on the disk. One sneaky bug to learn from: your bending strength uses the formula for a black hole of size 1 while the rest of your code sets it to 2, so your shadow comes out half-size relative to the disk. Units are where AI code quietly breaks: pick \"what does 1 unit mean?\" once, then ask the AI to audit every formula against it."
  },
  {
   "slug": "dying-blackhole-and-a-title-eaten",
@@ -395,9 +395,9 @@
   "shot": "/shots/dying-blackhole-and-a-title-eaten.jpg",
   "observed": "2026-07-11T18:37:28.060566+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "A wonderful idea executed with real rigor: fast-forwarding a black hole's death by Hawking evaporation, with the actual equations — your \"228 tonnes = one second left\" number is genuinely correct, and your warping grid uses the exact spacetime-distance formula, not an art trick. We also loved that every shortcut in your code is labeled as one. Two asks for next time: add the gravitational redshift to the disk's light (you have Doppler but light climbing out of the well should also redden), and ask your AI \"is my light-bending using the same black hole size as my labels?\" — your optics and your text disagree by a factor of two."
  },
  {
   "slug": "project-gargantua",
@@ -411,9 +411,9 @@
   "shot": "/shots/project-gargantua.jpg",
   "observed": "2026-07-11T18:45:43.427358+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "Beautiful result and mostly beautiful physics: real light-ray integration (your shadow and photon ring are earned, not painted — we rendered it ourselves to check), the correct professional disk-temperature profile, and real spectral color computed from Planck's law across 21 wavelengths, which no one else did. One real bug to learn from: your gravitational redshift is upside down — light near the horizon gets brighter and bluer in your code, when gravity should redden and dim it. The same wrong formula is in your README, so the AI taught it to you confidently. Lesson: ask \"should light lose or gain energy climbing out of gravity?\" — sanity-check the direction of every effect."
  },
  {
   "slug": "into-the-abyss",
@@ -427,9 +427,9 @@
   "shot": "/shots/into-the-abyss.jpg",
   "observed": "2026-07-11T19:47:59.910708+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "Very good physics-first work: you integrated the exact Schwarzschild light-ray equation (not an approximation of it), the shadow boundary sits at the mathematically correct size, and your double images of the disk are real — rays genuinely wrap around the hole. One formula slipped: your orbital speed for the disk is about 20% too fast (a hybrid of two different formulas). Ask your AI: \"what's the circular orbit speed a local observer measures in Schwarzschild spacetime?\" and compare against what you have. Everything else is the real deal."
  },
  {
   "slug": "einstein-sandbox",
@@ -443,9 +443,9 @@
   "shot": "/shots/einstein-sandbox.jpg",
   "observed": "2026-07-11T20:06:27.264196+00:00",
   "isLate": false,
-  "category": null,
+  "category": "open",
   "winner": null,
-  "feedback": null
+  "feedback": "A dense little physics playground: real relativistic corrections you can toggle on and off (watching orbits precess when GR turns on is a great demo), the exact strong-lens image equation, tidal forces with the correct law, and — impressively — your shadow radius of 2.6× the horizon is the mathematically correct number, not a guess. For next time: give the file a proper .py name (it's currently extensionless, which breaks tooling), and ask your AI to show *two* lensed images per star — your lens equation actually predicts them, you're only drawing one."
  },
  {
   "slug": "silent-superradiance",
@@ -459,9 +459,9 @@
   "shot": "/shots/silent-superradiance.jpg",
   "observed": "2026-07-11T20:50:13.343482+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "The most adventurous topic in the field — actual current research physics (axion clouds stealing spin from black holes) that no other student touched, and your model has the right *shape*: growth only above a spin threshold, exponential rise, saturation, spin-down. The cloud size even scales the correct way with the coupling. The numbers themselves are tuned for watchability, which is fine — but say so on screen, and ask your AI: \"what is the actual superradiance growth-rate formula from the literature, and can we display real timescales next to the sped-up ones?\" That one label would make this presentation-grade science."
  },
  {
   "slug": "ton-618",
@@ -475,9 +475,9 @@
   "shot": "/shots/ton-618.jpg",
   "observed": "2026-07-11T22:21:44.283661+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "Great restraint where it counts: your code contains the most honest comment of the hackathon — a WARNING labeling one visual effect as \"completely non-physical\" — and your Doppler shading uses the full relativistic formula with the correct bright side. The five earlier attempts in your repo show real iteration. The core to fix: your light bending pulls rays straight toward the hole regardless of how they're moving; the real force depends on each ray's angular momentum. Ask your AI for \"the h² form of the Schwarzschild photon force\" — one line different, visibly better shadow."
  },
  {
   "slug": "seeing-the-invisible",
@@ -491,9 +491,9 @@
   "shot": "/shots/seeing-the-invisible.jpg",
   "observed": "2026-07-12T02:18:30.149336+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "Your code contains our favorite comment of the hackathon: the note explaining why you *deleted* your fake lensing and rebuilt it with real ray tracing — that paragraph shows more understanding than most complete projects. The new renderer is the genuine article. One physics nit: in your Hawking radiation mode, both particles of each pair fly outward, but the whole reason the black hole shrinks is that one partner falls *in*. Ask your AI: \"in Hawking radiation, where does each partner go, and why does the hole lose mass?\" Your mass bookkeeping is right — make the choreography match it."
  },
  {
   "slug": "dance-of-titans-a-cinematic-binary-black",
@@ -507,9 +507,9 @@
   "shot": "/shots/dance-of-titans-a-cinematic-binary-black.jpg",
   "observed": "2026-07-12T04:48:16.843798+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "Your repo has professional scaffolding — license, citation file, CI workflow, contribution guide — but sim.py is empty: the actual simulation never got committed. Your gallery video clearly shows real work exists on your machine, which makes this a git lesson, not a physics one: after pushing, always open your own repo in a browser and check the files are really there (and that tests test something — yours currently assert that constants are positive). Push the real sim and ask the judges for a re-look; the packaging skills you've already shown are rare."
  },
  {
   "slug": "star-to-singularity",
@@ -523,9 +523,9 @@
   "shot": "/shots/star-to-singularity.jpg",
   "observed": "2026-07-12T05:21:35.007939+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "A satisfying narrative arc — star, supernova, black hole, quasar — with a solid core: your gravity is the correct pseudo-potential, and your disk particles are seeded with the mathematically matching orbital speed (a consistency most entries miss), plus the black hole grows by what it eats. The swirl, though, is a hand-tuned force with a ×5 fudge, not real frame dragging. Ask your AI: \"what is the Lense-Thirring precession rate, and how does it scale with distance?\" Also consider labeling the supernova stages on screen — your two-zone collapse deserves the exposition."
  },
  {
   "slug": "helios",
@@ -539,9 +539,9 @@
   "shot": "/shots/helios.jpg",
   "observed": "2026-07-12T06:44:26.873237+00:00",
   "isLate": false,
-  "category": null,
+  "category": "open",
   "winner": null,
-  "feedback": null
+  "feedback": "The only solar physics entry, and your written explanations of magnetic reconnection are accurate — the buildup-threshold-release story is genuinely how flares work. But the simulation is an animation: field lines are drawn curves, the \"stored energy\" is a counter, and the sliders' physical units (Tesla, MK) label things the code never computes. The gap-closing question for next time: \"can we compute an actual magnetic field on a grid and move the particles along it?\" Even a simple dipole field with real field-line tracing would transform this from illustrated textbook to simulation. Your science writing is already there."
  },
  {
   "slug": "physics-that-keeps-jupiters-asteriods-in",
@@ -555,9 +555,9 @@
   "shot": "/shots/physics-that-keeps-jupiters-asteriods-in.jpg",
   "observed": "2026-07-12T07:14:13.432208+00:00",
   "isLate": false,
-  "category": null,
+  "category": "open",
   "winner": null,
-  "feedback": null
+  "feedback": "A little gem. You simulated the actual reason Jupiter's Trojan asteroids exist — the full rotating-frame three-body equations, exactly right — and instead of hardcoding the Lagrange points, your code *finds* them by solving the equilibrium condition, with the correct textbook starting guesses. That's real celestial mechanics. To extend it: ask your AI about the \"Jacobi constant\" (the conserved quantity of your exact system) and plot it — watching it stay flat is the proof your integration is good, and watching asteroids leak from L1/L2 while L4/L5 hold is the whole story in one graph."
  },
  {
   "slug": "blackhole-simulation",
@@ -571,9 +571,9 @@
   "shot": "/shots/blackhole-simulation.jpg",
   "observed": "2026-07-12T07:15:40.501731+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "Your ray bending is done with unusual care — the light-path equation is integrated with a proper four-stage method that recomputes the angular momentum at every sub-step, which is more rigorous than most entries — and the glowing ring emerges from rays that truly grazed the hole. The soft spot is the lighting: your Doppler formula (1 + 4×speed) is invented. The real one is 1/(γ(1−v·cosθ)). Ask your AI for it by name, and also reconsider auto-installing packages inside the script — reviewers get nervous when code installs things by itself."
  },
  {
   "slug": "hawking-radiation-lab-a-interactive-blac",
@@ -587,9 +587,14 @@
   "shot": "/shots/hawking-radiation-lab-a-interactive-blac.jpg",
   "observed": "2026-07-12T07:57:22.710748+00:00",
   "isLate": false,
-  "category": null,
-  "winner": null,
-  "feedback": null
+  "category": "blackhole",
+  "winner": "3",
+  "feedback": "A unique and rigorous entry: while everyone else drew black holes, you built a laboratory for their thermodynamics — real Hawking temperature, entropy, and evaporation equations for rotating and charged holes, with a 22-test suite that we ran and passed completely. Your code even flags results below the Planck scale as \"speculative,\" which is real scientific honesty. To make it land better with a crowd, consider a simple visual layer (even a glowing dot that shrinks and heats up) — ask your AI to \"connect the physics engine to a live visualization.\" The science is already there.",
+  "scores": {
+   "accuracy": 36,
+   "design": 17,
+   "creativity": 27
+  }
  },
  {
   "slug": "wesker-a-real-time-sagittarius-a",
@@ -603,9 +608,14 @@
   "shot": "/shots/wesker-a-real-time-sagittarius-a.jpg",
   "observed": "2026-07-12T09:29:37.896762+00:00",
   "isLate": false,
-  "category": null,
-  "winner": null,
-  "feedback": null
+  "category": "blackhole",
+  "winner": "1",
+  "feedback": "Hugely ambitious and it paid off: you implemented real rotating-black-hole light bending inside Unreal Engine's shader system — a harder environment than everyone else's Python, and the math (the same used in research renderers) is correct, including how the disk's light shifts color and brightness. Your honest code comment admitting the Hawking glow is exaggerated (\"really 10⁻¹⁴ K, invisible\") is exactly the right instinct. Next time, ask your AI for a way to verify the shader: even rendering one known test case and comparing against a reference image would prove what you built.",
+  "scores": {
+   "accuracy": 35,
+   "design": 24,
+   "creativity": 33
+  }
  },
  {
   "slug": "spaghettification-blackhole",
@@ -619,9 +629,9 @@
   "shot": "/shots/spaghettification-blackhole.jpg",
   "observed": "2026-07-12T10:25:47.780783+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "You picked one concept and got its formula right: your tidal force uses the true 2GML/r³ law, and making the object's *length* a slider is exactly the correct experiment — longer objects tear farther out, and your sim shows it. The energy readouts are a nice scientific touch. To deepen it: real spaghettification is the *difference* in pull between an object's near and far ends — ask your AI to model each object as two connected points and let the stretching emerge, instead of applying the formula as an extra kick. Same physics, visibly more truthful."
  },
  {
   "slug": "a-majestic-blackhole-simulation",
@@ -635,9 +645,9 @@
   "shot": "/shots/a-majestic-blackhole-simulation.jpg",
   "observed": "2026-07-12T10:56:31.286137+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "More sophisticated than it lets on: your light bending works in \"isotropic coordinates\" with the horizon at the mathematically correct (and obscure!) radius — a formulation we saw nowhere else — and your disk uses the exact spinning-black-hole orbital frequency. The weak link is color: your Doppler is a linear brightness nudge instead of the real relativistic factor. Ask your AI for \"the relativistic Doppler factor with a Lorentz gamma\" and feed your (already correct) orbital speeds into it. The hard math is done; the shading just needs to catch up."
  },
  {
   "slug": "bhlab",
@@ -651,9 +661,9 @@
   "shot": "/shots/bhlab.jpg",
   "observed": "2026-07-12T11:00:18.852666+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "The most feature-complete black hole lab of the competition — and the light bending underneath is real, with the shadow and Einstein ring emerging from actual ray physics. Your gas drag even knows that disks orbit slightly slower than free particles (a real astrophysics detail that made us smile), and your changelog shows genuine iteration. With this much surface area, the next skill is verification: pick your three most important numbers (shadow size, ISCO, orbit decay rate) and ask your AI to write checks for them. A lab this big deserves its own quality control."
  },
  {
   "slug": "binary-blackhole",
@@ -667,9 +677,9 @@
   "shot": "/shots/binary-blackhole.jpg",
   "observed": "2026-07-12T11:23:48.491791+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "The repo contains a single line — its own name — and nothing else. Your gallery entry suggests a real simulation exists on your machine that never got pushed. This is fixable in five minutes: commit the project folder, push, and open your repo in a browser to confirm the files are visible. Every hour you spent building deserves those five minutes of git. Push it and flag the organizers for a re-review."
  },
  {
   "slug": "star-to-singularity-x",
@@ -683,9 +693,9 @@
   "shot": "/shots/star-to-singularity-x.jpg",
   "observed": "2026-07-12T11:50:55.527232+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "The best-engineered repo of the competition — clean modules, a science-references document, config, education content — and the parts you finished are genuinely correct astrophysics (your stellar mass-luminosity-lifetime relations and your core-collapse numbers, including the Chandrasekhar and neutron-star limits, would pass a university course). But the black hole physics — gravity, lensing, the disk — are stub files marked \"to be implemented.\" You built a beautiful house and didn't move in. Next time, inner loop first: get one ugly end-to-end sim working, *then* engineer around it."
  },
  {
   "slug": "binary-neutron-star-inspiral-kilonova",
@@ -699,9 +709,9 @@
   "shot": "/shots/binary-neutron-star-inspiral-kilonova.jpg",
   "observed": "2026-07-12T13:30:09.515835+00:00",
   "isLate": false,
-  "category": null,
+  "category": "open",
   "winner": null,
-  "feedback": null
+  "feedback": "Your README does something we want to praise: a real \"disclosed approximations\" section, and the pulsar lighthouse geometry (tilted magnetic axis, independent spin rates, physical spin timescale) is correctly built. But the headline claim doesn't survive contact with the code: you cite Peters 1964 for the orbital decay, and the code implements a constant drag factor instead. The real law (decay ∝ 1/separation³) is a three-line change — ask your AI for exactly that, and your README becomes true. Also: your README says run sim.py, but the file is render.py. Small things; easy fixes; big credibility difference."
  },
  {
   "slug": "real-time-void",
@@ -715,9 +725,9 @@
   "shot": "/shots/real-time-void.jpg",
   "observed": "2026-07-12T14:36:45.362271+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "Superb. You implemented the rotating black hole's light-bending equations with fully hand-derived math (most people let the computer approximate the derivatives — yours are exact), and your colors come from real physics: actual blackbody radiation run through the same color science real displays use. The toggles for turning redshift and Doppler on and off separately make it a great teaching tool too. Next step: ask your AI for a headless test that fires a few known light rays and checks they land where theory says — your engine is accurate enough to deserve the proof."
  },
  {
   "slug": "the-accretion-carousel",
@@ -731,9 +741,9 @@
   "shot": "/shots/the-accretion-carousel.jpg",
   "observed": "2026-07-12T14:40:09.531569+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "Your disk kinematics are among the most correct in the field — you used the true relativistic orbit speed (nearly everyone else uses the Newtonian one) with an honest comment explaining why it diverges near the hole, and your Doppler brightening uses the full formula with the right side glowing. One overclaim to fix: the comment says your bending force is the light-ray equation \"converted\" to a radial pull, but the real conversion keeps each ray's angular momentum — yours drops it. Ask your AI to show you both versions side by side; the difference is exactly the photon ring's sharpness."
  },
  {
   "slug": "binary-merging",
@@ -747,9 +757,9 @@
   "shot": "/shots/binary-merging.jpg",
   "observed": "2026-07-12T14:40:26.059727+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "You did something subtle and right: instead of faking the inspiral, you used the actual solved form of Peters' equation (the D⁴ law), with the correct mass dependence — and your final black hole keeps 95% of the mass and spins at 0.72, both matching real merger results. The strain graph and the audio chirp follow from the real orbital frequency. The gap is the visuals: your lensing shader is a decorative warp. Ask your AI to \"bend rays using the conserved angular momentum\" — with your dynamics already correct, real lensing would complete the picture."
  },
  {
   "slug": "x-ray-accreting-pulsar-engine",
@@ -763,9 +773,9 @@
   "shot": "/shots/x-ray-accreting-pulsar-engine.jpg",
   "observed": "2026-07-12T14:41:10.328322+00:00",
   "isLate": false,
-  "category": null,
+  "category": "open",
   "winner": null,
-  "feedback": null
+  "feedback": "Original topic — an accreting X-ray pulsar with knotty jets, which nobody else attempted — and the jet \"pinch knots\" gesture at a real plasma instability. The physics under the hood is a single gravity law plus choreographed forces; the words \"magnetic\" and \"pulsar\" live in the shapes, not in equations. Two askable upgrades: \"add a dipole magnetic field and funnel the accretion onto the magnetic poles\" (that's what makes an X-ray pulsar pulse!), and \"compute the beaming from the actual viewing angle.\" Your topic deserves its defining physics."
  },
  {
   "slug": "blackhole",
@@ -779,9 +789,9 @@
   "shot": "/shots/blackhole.jpg",
   "observed": "2026-07-12T15:18:15.077637+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "Solid particle-disk foundations: the relativistic precession correction is correctly assembled, your frame-dragging swirl uses the right distance scaling, and your background stars shift by an Einstein-angle rule with the correct square-root behavior — a middle path between fake and full ray tracing that shows real thought. Next: your lens coefficients are tuned by eye; ask your AI to calibrate them against the true deflection angle (4GM/c²b), and add Doppler brightening to the disk so its rotation becomes visible in the light."
  },
  {
   "slug": "cosmic-convergence",
@@ -795,9 +805,9 @@
   "shot": null,
   "observed": "2026-07-12T15:40:39.860637+00:00",
   "isLate": false,
-  "category": null,
+  "category": "open",
   "winner": null,
-  "feedback": null
+  "feedback": "A clean, self-consistent galaxy collision: your softened gravity and your rotation speeds come from the *same* model (Plummer), which means your disks are actually in equilibrium — a consistency detail many flashier entries miss. Two things: your gallery page has no screenshot (upload one — your work is invisible on the results site right now!), and to level up the physics, ask your AI to seed an exponential disk with spiral arms and add an energy readout. The correct foundation is already there."
  },
  {
   "slug": "my-first-blackhole",
@@ -811,9 +821,9 @@
   "shot": null,
   "observed": "2026-07-12T16:18:28.549417+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "Only the launcher made it to GitHub — main.py imports six other files (the simulator, renderer, UI, even an AI assistant) that were never committed, so nothing can run, and your gallery page also has no screenshot. From the launcher we can see the ambition: staged stellar evolution, clickable orbit probes, equation telemetry. The fix is mechanical: \"git add\" the whole folder, push, then clone your own repo fresh and run it — if it works from the clone, it works for judges. Do that and ask for a second look; there's clearly a real project behind this door."
  },
  {
   "slug": "m-87-blackhole",
@@ -827,9 +837,9 @@
   "shot": "/shots/m-87-blackhole.jpg",
   "observed": "2026-07-12T16:31:44.895197+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "A charming, sincere project — the hand-written README explaining every panel is worth more than polished AI prose, and your physics has real depth: correct spinning-black-hole formulas driving a live telemetry dashboard, proper light-bending with each photon's own angular momentum. Here's the fun part: your test file contains a full, correct Kerr ray integrator that's *better* than what your main sim uses (we ran it — it works). You built the real thing and shipped the simpler one! Next time, ask your AI to wire the good engine into the main app. It's already sitting in your repo."
  },
  {
   "slug": "black-hole-sim",
@@ -843,9 +853,9 @@
   "shot": "/shots/black-hole-sim.jpg",
   "observed": "2026-07-12T16:35:06.996141+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "Your repo tells an interesting story: the shipped sim is a simple orbit toy, but your test file describes a much richer version — star self-gravity, energy classification, tidal disruption bookkeeping — that never made it into the final code. And you built a headless compile check (we ran it; it passes), which is more infrastructure than most. Advice: ship the ambitious version the tests were written for, or trim the tests to match reality — a mismatch between tests and code is more confusing than either alone. The instinct to build checks is the right one; point it at the sim you actually submit."
  },
  {
   "slug": "blackhole-sim",
@@ -859,9 +869,9 @@
   "shot": "/shots/blackhole-sim.jpg",
   "observed": "2026-07-12T16:54:56.515472+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "Hidden inside your zip file is genuinely research-grade work: a black hole engine that solves the full geometry of curved spacetime in high precision, with documentation and a test suite — which we ran, and it passed with flying colors (your light rays stay physically consistent to ten decimal places). Two pieces of advice, both about packaging rather than physics: commit the actual source folder to GitHub instead of a zip (judges and future employers need to see it without unzipping), and consider making the fast pretty demo and the slow accurate engine talk to each other. When you prompt an AI, you clearly already ask for \"make it correct AND prove it\" — keep that."
  },
  {
   "slug": "black-hole-accertion-disk",
@@ -875,9 +885,9 @@
   "shot": "/shots/black-hole-accertion-disk.jpg",
   "observed": "2026-07-12T16:57:28.085185+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "Well-organized and genuinely instrumented: your particles feel the correct relativistic precession correction, your black hole grows by exactly what it swallows, and — the standout — you plot energy and angular momentum live while the sim runs. Watching total energy fall as the disk settles is real physics measurement, and almost nobody else built gauges. Two asks: your homemade ring-viscosity is clever but its coefficients are guesses — ask your AI about the \"alpha-disk model\" for a physically-motivated version; and add light (Doppler brightening) so the physics you compute becomes visible."
  },
  {
   "slug": "cosmic-encounter-ultra-realistic-self-gr",
@@ -891,9 +901,9 @@
   "shot": "/shots/cosmic-encounter-ultra-realistic-self-gr.jpg",
   "observed": "2026-07-12T16:58:01.90892+00:00",
   "isLate": false,
-  "category": null,
+  "category": "open",
   "winner": null,
-  "feedback": null
+  "feedback": "You did the thing nobody else did: your galaxies pull on *themselves* — you actually solve the gravity equation on a 3D grid every frame (the real particle-mesh method from computational astrophysics), with proper dark-matter halos and gas pressure. That's a level of method most university students don't reach. To sharpen it: ask your AI about \"cloud-in-cell deposit\" (smoother than your current grid assignment) and about how many solver iterations you need for convergence. Also add an energy readout — self-gravitating systems are the perfect place to watch conservation."
  },
  {
   "slug": "boomerang-nebula-black-hole-interaction-",
@@ -907,9 +917,9 @@
   "shot": "/shots/boomerang-nebula-black-hole-interaction-.jpg",
   "observed": "2026-07-12T17:06:06.329621+00:00",
   "isLate": false,
-  "category": null,
+  "category": "open",
   "winner": null,
-  "feedback": null
+  "feedback": "Wonderful topic — the coldest place in the universe meets a black hole, and nobody else went near it. Your gas model uses the right *techniques*: a real pressure force from a density grid, turbulence built the mathematically correct way (curl of a potential, so the gas never bunches unphysically), and a jet channel with proper cone geometry. What's missing is the thermodynamics your object is famous for: the Boomerang is cold because expanding gas cools. Ask your AI to \"add an energy equation so expansion actually lowers temperature\" — then your simulation would demonstrate the very effect that makes the nebula special."
  },
  {
   "slug": "life-after-him",
@@ -923,9 +933,9 @@
   "shot": "/shots/life-after-him.jpg",
   "observed": "2026-07-12T17:10:57.250717+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "This one stayed with us. The essay reframing the simulation as grief is the most human writing of the hackathon — and the physics underneath is real: your light rays follow genuine rotating-black-hole equations, and the color shift of your disk uses the exact textbook formula (the elegant closed-form version, which even the heavyweight entries didn't use). If you build on it: ask your AI to make the disk's colors come from real blackbody temperature rather than a palette, and to double-check the camera setup very close to the hole. Thank you for submitting something this honest."
  },
  {
   "slug": "the-formation-of-a-black-hole-in-a-nutsh",
@@ -939,9 +949,9 @@
   "shot": "/shots/the-formation-of-a-black-hole-in-a-nutsh.jpg",
   "observed": "2026-07-12T17:17:56.721389+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "Genuinely handsome front-end work — the staged story, the camera moves, the React architecture are all clean — but there's no physics engine behind the curtain: particles follow scripted spirals, and nothing is computed from gravity. The honest framing (\"in a nutshell\") saves it from overclaiming. Next step if you continue: keep your staging and ask your AI for a minimal real core — \"make the disk particles orbit under actual gravity with velocity Verlet\" is a single prompt, and suddenly your beautiful stages would be showing something true."
  },
  {
   "slug": "gravitational-lensing",
@@ -955,9 +965,9 @@
   "shot": "/shots/gravitational-lensing.jpg",
   "observed": "2026-07-12T17:30:32.517921+00:00",
   "isLate": false,
-  "category": null,
+  "category": "open",
   "winner": null,
-  "feedback": null
+  "feedback": "Small but exact: your lens mapping is the true point-mass lens equation (the Einstein rings in your animation are mathematically real), and your brightness uses the genuine microlensing magnification formula from the research literature. One physics subtlety to learn: the warping *already* magnifies — multiplying by the magnification formula on top double-counts the brightening. Ask your AI: \"does inverse ray shooting conserve surface brightness?\" Also consider making it interactive (drag the black hole) — your math is fast enough."
  },
  {
   "slug": "event-horizon-the-black-hole-hypothesis-",
@@ -971,9 +981,9 @@
   "shot": "/shots/event-horizon-the-black-hole-hypothesis-.jpg",
   "observed": "2026-07-12T17:33:35.077773+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "A properly engineered physics library: real SI units, correct spinning-black-hole formulas (horizons, ergosphere, ISCO), the exact relativistic Doppler and redshift expressions, and a spaghettification check that compares tidal force against material strength — that last one is a genuinely original way to make tides mean something. The gap: the library computes numbers for the HUD while the visuals run on ordinary animation. The bridge to ask for: \"make the camera's time dilation actually slow the scene\" and \"bend the starfield with the deflection formula\" — connect your correct math to what the eye sees."
  },
  {
   "slug": "da-tummmmmm",
@@ -987,9 +997,9 @@
   "shot": "/shots/da-tummmmmm.jpg",
   "observed": "2026-07-12T17:38:30.023777+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "Don't let anyone judge this by its title — this is the deepest physics of the competition. Your two black holes spiral together because of real Einstein equations (the same math LIGO uses, several correction levels deep), your gravitational waves ripple outward at the actual speed of light with the correct spiral pattern, and your integrator is the kind used in actual research. To polish it: the final black hole's spin is currently a hardcoded number — ask your AI to compute it from the angular momentum the system actually had at merger. And put a note in your README about how deep the physics goes; nobody would guess."
  },
  {
   "slug": "gravitational-singularity-simulator",
@@ -1003,9 +1013,9 @@
   "shot": "/shots/gravitational-singularity-simulator.jpg",
   "observed": "2026-07-12T17:41:19.293638+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "Clean and honest: correct Newtonian gravity, a frame-dragging swirl with the genuinely correct distance scaling (better than most), and your photon-sphere ring drawn at the mathematically right radius — with a comment admitting it's a marker, not computed light. That honesty is worth keeping. To move from marker to physics: ask your AI to bend a handful of actual light rays and see if the glow lands where your painted ring sits. When the computed version agrees with your marker, that's a genuinely satisfying moment."
  },
  {
   "slug": "kerr-neumann-metric-blackhole",
@@ -1019,9 +1029,9 @@
   "shot": "/shots/kerr-neumann-metric-blackhole.jpg",
   "observed": "2026-07-12T17:41:20.641415+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "Quiet and excellent: yours is the only project in the entire hackathon that actually implements the charged, rotating (Kerr–Newman) black hole — the metric components with the charge terms are all correct, and your plain-spoken comments (\"wiggle r to find radial gravity\") show you understood what the code does. Two upgrades: launch your camera rays from a proper relativistic observer frame (ask your AI for a \"ZAMO tetrad camera\"), and give the disk real Doppler shading. The hard part — the metric — you already got right."
  },
  {
   "slug": "f16-flight-simulator",
@@ -1035,9 +1045,14 @@
   "shot": "/shots/f16-flight-simulator.jpg",
   "observed": "2026-07-12T17:42:37.129906+00:00",
   "isLate": false,
-  "category": null,
-  "winner": null,
-  "feedback": null
+  "category": "open",
+  "winner": "1",
+  "feedback": "The boldest topic swerve of the hackathon, and genuinely well built: a real six-degree-of-freedom flight model with the same architecture professional simulators use — aerodynamic tables, stall behavior, a standard atmosphere, dynamic pressure, g-loading. That's legit aerospace engineering. Two suggestions: your aero tables are invented numbers with the right shapes — the real NASA F-16 wind-tunnel data is public, ask your AI to \"use the Stevens & Lewis F-16 tables\"; and add a trim test (\"does level flight at fixed throttle stay level?\") to validate the whole loop at once.",
+  "scores": {
+   "accuracy": 30,
+   "design": 21,
+   "creativity": 34
+  }
  },
  {
   "slug": "interactive-relativistic-blackhole-simul",
@@ -1051,9 +1066,9 @@
   "shot": "/shots/interactive-relativistic-blackhole-simul.jpg",
   "observed": "2026-07-12T17:48:57.45201+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "The lensing here is real — rays bend using the correct physics with each ray's own angular momentum, and the warped disk you see is earned. But the \"Doppler\" is keyed to the screen's x-coordinate: one side of the *screen* is brighter, regardless of where the camera or the gas actually is. It works for exactly one camera angle and silently breaks for all others. The lesson: effects tied to the screen instead of the physics are the most common AI shortcut — test by orbiting the camera and asking \"does the bright side follow the gas or follow my monitor?\""
  },
  {
   "slug": "einstein-s-trampoline",
@@ -1067,9 +1082,9 @@
   "shot": "/shots/einstein-s-trampoline.jpg",
   "observed": "2026-07-12T17:53:58.86897+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "Great concept, properly executed: instead of faking the classic \"rubber sheet,\" you bent the sheet itself through real rotating-black-hole light equations — the grid warps because genuine relativity says so. The pipe-organ soundtrack is a lovely touch. Two ways to level up: add the relativistic brightness shift to the disk (ask your AI for \"the Doppler g-factor for a Kerr disk\"), and request a quick conservation check on your ray integrator — finite-difference math can drift quietly, and one test would tell you if it does."
  },
  {
   "slug": "gargantua",
@@ -1083,9 +1098,9 @@
   "shot": "/shots/gargantua.jpg",
   "observed": "2026-07-12T17:58:59.580094+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "Small, focused, and exact: your header claims every particle follows the exact relativistic orbit equation, and it's true — we checked the math. The orbit precession and the sudden plunges near the hole in your sim are real general relativity, not effects. Two directions to grow: add light (even simple ray bending would let your exact orbits cast an accurate shadow picture), and display each particle's conserved energy and angular momentum — with exact dynamics like yours, those numbers staying constant is a proof you can show off."
  },
  {
   "slug": "black-hole-simulation",
@@ -1099,9 +1114,9 @@
   "shot": "/shots/black-hole-simulation.jpg",
   "observed": "2026-07-12T18:11:32.504417+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "A working 100-line orbit toy — correct gravity, sensible orbital seeding, a mouse attractor — honestly presented with no fake physics. Three quick wins: name the file with a .py extension (it's currently just \"Code\", which breaks running it normally), remove or justify the hidden 0.9997 velocity damping (it quietly drags everything inward — if that's intentional accretion, label it!), and add one relativistic marker like the Schwarzschild radius with a mass slider. Small project, but a clean base to grow from."
  },
  {
   "slug": "event-horizon-exe",
@@ -1115,9 +1130,9 @@
   "shot": "/shots/event-horizon-exe.jpg",
   "observed": "2026-07-12T18:14:59.723008+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "Solid and honest: your renderer integrates the real light-bending equation (and even displays that equation on screen — great touch), the Doppler shift uses the true relativistic formula, and your comments openly say which parts are not full Kerr. Your color-science bug note (the \"white-point fix\") reads like a real lab notebook. Main growth area: the galaxy backdrop is hand-painted blob by blob — ask your AI for a procedural background (noise-based star fields scale better and lens more convincingly). And the classroom photon-path overlay deserves to be front and center; it's the most teachable thing you built."
  },
  {
   "slug": "hawking",
@@ -1131,9 +1146,9 @@
   "shot": "/shots/hawking.jpg",
   "observed": "2026-07-12T18:15:10.757421+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "A tidy accretion sim with a nice hook — the black hole evaporates faster as it shrinks, which is the correct *direction* of Hawking's law. The formulas themselves aren't there yet: emission is a tuned probability rather than the actual temperature/lifetime equations, and the Doppler is a linear nudge. The real Hawking formulas are surprisingly simple to add — ask your AI for \"Hawking temperature and lifetime as functions of mass\" and drive your probability from them; then your sim would show the spectacular runaway ending for free."
  },
  {
   "slug": "arepo-blackhole-simulation",
@@ -1147,9 +1162,9 @@
   "shot": "/shots/arepo-blackhole-simulation.jpg",
   "observed": "2026-07-12T18:18:37.682459+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "Named after a real research code, and closer to earning it than we expected: your disk has actual thermodynamics — the correct density and temperature profiles, a real gas law linking pressure and energy, even a magnetic field with the right disk-like shape — plus a headless test harness that we ran and passed completely. The missing piece is light: nothing bends, so the black hole's most famous features are geometric rather than optical. Ask your AI for \"backward ray tracing with the Schwarzschild pseudo-force\" as a next step — your disk deserves to be seen relativistically."
  },
  {
   "slug": "ultimate-spectral-chaos-n-body-problem-b",
@@ -1163,9 +1178,9 @@
   "shot": "/shots/ultimate-spectral-chaos-n-body-problem-b.jpg",
   "observed": "2026-07-12T18:19:04.052004+00:00",
   "isLate": false,
-  "category": null,
+  "category": "open",
   "winner": null,
-  "feedback": null
+  "feedback": "Honest, well-integrated N-body chaos: you used the correct symplectic integrators (velocity Verlet for the heavies, leapfrog for the tracers — and your comments name them properly), and your black hole mergers conserve momentum exactly as they should. The \"spectral\" visuals are clearly labeled as visualization. To push it further: plot total energy over time (symplectic integrators have a beautiful signature — bounded wiggle, no drift — and yours should show it), and consider a Lyapunov-style demo: two nearly identical systems diverging is the visual proof of the chaos in your title."
  },
  {
   "slug": "blackhole-coalescence-simulation",
@@ -1179,9 +1194,9 @@
   "shot": "/shots/blackhole-coalescence-simulation.jpg",
   "observed": "2026-07-12T18:19:16.672312+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "Your inspiral has the two scaling laws that matter, both correct: orbits decay following Peters' inverse-cube law, and the orbital frequency rises with the right power as separation shrinks — so your merger's *shape* in time is genuine. What's missing is the physics inside the constants: the decay speed is one tuned number, so black hole masses don't actually matter to your merger. Ask your AI for \"Peters 1964 with the full mass dependence\" (it's one line: 64/5 · m₁m₂(m₁+m₂)) — then heavier holes would genuinely merge faster, and your mass sliders would mean something."
  },
  {
   "slug": "black-holes",
@@ -1195,9 +1210,9 @@
   "shot": "/shots/black-holes.jpg",
   "observed": "2026-07-12T18:21:05.694006+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "Your Doppler shading is the exact relativistic formula — the √((1+β)/(1−β)) factor with fourth-power beaming, which most flashier entries fake — and your disk structure choices are sensible. The lensing, though, is a screen-space warp with a tuned strength, so the black hole's signature optics are decoration. With your Doppler already exact, you're one step from the real thing: ask your AI to \"march rays with the Schwarzschild pseudo-force\" and keep everything else you have. You did the hard half first, unusually."
  },
  {
   "slug": "quasar-quantum-wave-analysis-slit-simula",
@@ -1211,9 +1226,9 @@
   "shot": "/shots/quasar-quantum-wave-analysis-slit-simula.jpg",
   "observed": "2026-07-12T18:22:23.548918+00:00",
   "isLate": false,
-  "category": null,
+  "category": "open",
   "winner": null,
-  "feedback": null
+  "feedback": "You built the honest version of the double-slit: instead of drawing the fringe formula, you solve the actual wave equation on a grid and let interference *emerge* — plus a which-path \"measurement\" mode that washes out the fringes, which is a genuinely thoughtful touch. One physics wobble: your update includes an extra term (−k²ψ) that doesn't belong in a pure wave equation — ask your AI \"what equation am I actually solving, wave or Klein-Gordon?\" It doesn't ruin the demo, but knowing exactly which equation you solve is the whole spirit of your project."
  },
  {
   "slug": "black-hole-simulation-with-a-geodesic-pa",
@@ -1227,9 +1242,9 @@
   "shot": "/shots/black-hole-simulation-with-a-geodesic-pa.jpg",
   "observed": "2026-07-12T18:25:40.015936+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "The physics core here is the real thing — full rotating-black-hole light bending with the exact relativistic color shift, plus a live geodesic analyzer panel that teaches while it renders. Two thoughts: first, the extra color \"boosts\" you layer on top of the correct physics slightly undercut it — ask your AI to show you the picture with *only* the physical shift, you may like it more. Second, your physics engine is very similar to another submission's — if you built it together or shared a starting point, say so in the README next time; transparency about sources is part of good science."
  },
  {
   "slug": "manas-universal-sim-engine",
@@ -1243,9 +1258,9 @@
   "shot": "/shots/manas-universal-sim-engine.jpg",
   "observed": "2026-07-12T18:27:16.191322+00:00",
   "isLate": false,
-  "category": null,
+  "category": "open",
   "winner": null,
-  "feedback": null
+  "feedback": "The engineering ambition is visible — workspace, terminal, HUD, procedural generation, a build spec — but the physics content is two Kepler formulas (both correct!) inside an engine-shaped shell. The \"universal sim engine\" framing is the trap: engines are judged by the sims they run. Flip the order next time — ask your AI for one complete, correct simulation first (even a two-body orbit with an energy readout), then grow the engine around what that sim needs. Your infrastructure skills will matter; they just need a physics payload."
  },
  {
   "slug": "the-void-project",
@@ -1259,9 +1274,9 @@
   "shot": "/shots/the-void-project.jpg",
   "observed": "2026-07-12T18:29:14.475801+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "Very strong work — and you did something almost nobody does: your code cites its sources (Chandrasekhar's textbook, real research papers) right in the comments. The light-bending math is the genuine rotating-black-hole formulation, correctly derived. The place to improve: your disk colors shift by a rough red/blue rule instead of the exact relativistic factor your own math could compute — ask your AI to \"use the exact g-factor from the orbit and photon, not an approximation.\" And keep citing sources; it made your work instantly more trustworthy than most."
  },
  {
   "slug": "gravitational-waves",
@@ -1275,9 +1290,9 @@
   "shot": "/shots/gravitational-waves.jpg",
   "observed": "2026-07-12T18:30:08.610001+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "The disk visuals are pleasant and your gravitational redshift function is real, but the title writes a check the code doesn't cash: the \"gravitational waves\" are expanding ripple graphics with no source, no strain formula, no frequency law. Two of your competitors show what the next level looks like — ask your AI for \"Peters' equation for orbital decay\" and \"quadrupole strain h ∝ ω²cos(2φ)\" and drive your ripples from an actual orbiting pair. The rendering skills are clearly there; aim them at the physics in your own title."
  },
  {
   "slug": "talk-to-this-black-hole-or-it-ll-die",
@@ -1291,9 +1306,14 @@
   "shot": "/shots/talk-to-this-black-hole-or-it-ll-die.jpg",
   "observed": "2026-07-12T18:31:34.570866+00:00",
   "isLate": false,
-  "category": null,
-  "winner": null,
-  "feedback": null
+  "category": "blackhole",
+  "winner": "2",
+  "feedback": "The best interactive concept of the hackathon: keeping a black hole alive with your voice, against real Hawking evaporation — and the evaporation is the actual formula, integrated live, with a starting mass chosen so the natural lifetime is ~43 seconds (we checked; that's right). Genuinely creative *and* genuinely physical. Two notes: the rendering underneath is screen-space lensing, so the README's \"per-pixel gravitational lensing\" oversells it — ask your AI for ray-integrated lensing, or soften the claim; and if you started from another project's rendering base, credit it in the README. The mic mechanic is 100% yours and it's brilliant.",
+  "scores": {
+   "accuracy": 25,
+   "design": 22,
+   "creativity": 35
+  }
  },
  {
   "slug": "schwarzschild-black-hole-ray-tracer",
@@ -1307,8 +1327,8 @@
   "shot": "/shots/schwarzschild-black-hole-ray-tracer.jpg",
   "observed": "2026-07-12T18:34:17.076357+00:00",
   "isLate": false,
-  "category": null,
+  "category": "blackhole",
   "winner": null,
-  "feedback": null
+  "feedback": "The tagline says \"no fakery\" and the lensing backs it up: exact Schwarzschild light-ray equations with a clever mathematical trick to keep them stable near the horizon, the professional disk-temperature profile, and even the observer's own gravitational redshift — a subtlety almost everyone forgets. One gap: the disk has no Doppler shift, so the side spinning toward the viewer isn't brighter the way relativity demands. Ask your AI for \"relativistic beaming for a Keplerian disk\" and your no-fakery claim will be complete."
  }
 ]

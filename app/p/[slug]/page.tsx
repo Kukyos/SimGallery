@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ScoreBars from "@/components/ScoreBars";
-import { entries, bySlug, designation, CATEGORY_LABEL } from "@/lib/data";
+import { entries, bySlug, designation, CATEGORY_LABEL, awardsFor, METRIC_LABEL } from "@/lib/data";
 
 export function generateStaticParams() {
   return entries.map((e) => ({ slug: e.slug }));
@@ -47,6 +47,8 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
   if (!e) notFound();
 
   const embed = toEmbed(e.video_url);
+  const bands = awardsFor(e.slug);
+  const nth = (n: number) => (n === 1 ? "1st" : n === 2 ? "2nd" : "3rd");
 
   return (
     <main className="mx-auto max-w-3xl px-4 pt-10">
@@ -65,6 +67,19 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         )}
         {e.isLate && <span className="text-redshift">redshifted*</span>}
       </div>
+
+      {bands.length > 0 && (
+        <div className="mt-3 flex flex-wrap gap-2">
+          {bands.map((b) => (
+            <span
+              key={b.metric}
+              className="rounded-full border border-photon/30 bg-photon/5 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.15em] text-photon"
+            >
+              ◆ {nth(b.place)} in {METRIC_LABEL[b.metric]} · {b.value}/{b.max}
+            </span>
+          ))}
+        </div>
+      )}
 
       <h1 className="font-display mt-3 text-4xl leading-tight sm:text-5xl">{e.title}</h1>
       {e.tagline && <p className="mt-3 text-lg text-ink/80">{e.tagline}</p>}

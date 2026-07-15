@@ -2,7 +2,7 @@ import Link from "next/link";
 import Disk from "@/components/Disk";
 import Catalog from "@/components/Catalog";
 import ScoreBars from "@/components/ScoreBars";
-import { entries, designation, CATEGORY_LABEL } from "@/lib/data";
+import { entries, designation, CATEGORY_LABEL, awards, METRIC_LABEL } from "@/lib/data";
 
 export default function Home() {
   const winners = entries.filter((e) => e.winner);
@@ -94,9 +94,59 @@ export default function Home() {
         )}
       </section>
 
+      {/* ——— Per-metric podiums ——— */}
+      {winners.length > 0 && (
+        <section className="mt-24">
+          <SectionTitle k="02" title="Brightest in band" sub="top 3 per criterion" />
+          <p className="mt-4 max-w-xl text-sm leading-relaxed text-dim">
+            Every object was measured in three bands — scientific accuracy, design &amp; visuals,
+            and creativity. These shone brightest in each, per category.
+          </p>
+          <div className="mt-8 space-y-10">
+            {(["blackhole", "open"] as const).map((cat) => (
+              <div key={cat}>
+                <div className="font-mono text-[11px] uppercase tracking-[0.3em] text-ember">
+                  {CATEGORY_LABEL[cat]} category
+                </div>
+                <div className="mt-4 grid gap-4 md:grid-cols-3">
+                  {(["accuracy", "design", "creativity"] as const).map((m) => (
+                    <div key={m} className="rounded-lg border border-white/10 bg-panel/60 p-4">
+                      <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-photon/80">
+                        {METRIC_LABEL[m]}
+                      </div>
+                      <ol className="mt-3 space-y-2.5">
+                        {awards[cat][m].map((a, i) => (
+                          <li key={a.slug} className="flex items-baseline gap-3">
+                            <span
+                              className={`font-mono text-[11px] ${i === 0 ? "text-ember" : "text-dim"}`}
+                            >
+                              {i + 1}
+                            </span>
+                            <Link
+                              href={`/p/${a.slug}`}
+                              className="min-w-0 flex-1 truncate text-sm text-ink hover:text-photon"
+                              title={a.title}
+                            >
+                              {a.title}
+                            </Link>
+                            <span className="font-mono text-[11px] text-dim">
+                              {a.value}/{a.max}
+                            </span>
+                          </li>
+                        ))}
+                      </ol>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* ——— Full catalog ——— */}
       <section className="mt-24">
-        <SectionTitle k="02" title="The full catalog" sub={`all ${entries.length} objects`} />
+        <SectionTitle k="03" title="The full catalog" sub={`all ${entries.length} objects`} />
         <div className="mt-6">
           <Catalog entries={entries} />
         </div>
