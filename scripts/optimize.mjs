@@ -18,8 +18,18 @@ for (const f of readdirSync(DIR)) {
   after += out.length;
 }
 
-const data = JSON.parse(readFileSync("data/results.json", "utf8"));
-for (const e of data) if (e.shot) e.shot = e.shot.replace(/\.[^.]+$/, ".jpg");
-writeFileSync("data/results.json", JSON.stringify(data, null, 1));
+// Every file that carries a shot path has to follow the rename.
+const fix = (o) => {
+  if (Array.isArray(o)) o.forEach(fix);
+  else if (o && typeof o === "object") {
+    if (typeof o.shot === "string") o.shot = o.shot.replace(/\.[^.]+$/, ".jpg");
+    Object.values(o).forEach(fix);
+  }
+};
+for (const f of ["data/results.json", "data/awards.json"]) {
+  const data = JSON.parse(readFileSync(f, "utf8"));
+  fix(data);
+  writeFileSync(f, JSON.stringify(data, null, 1));
+}
 
 console.log(`${(before / 1e6).toFixed(0)}MB → ${(after / 1e6).toFixed(0)}MB`);

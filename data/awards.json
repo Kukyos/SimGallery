@@ -7,7 +7,7 @@
     "author": "Debarun Datta",
     "value": 38,
     "max": 40,
-    "shot": "/shots/blackhole-sim.png"
+    "shot": "/shots/blackhole-sim.jpg"
    },
    {
     "slug": "sign-of-the-space-times",
@@ -15,7 +15,7 @@
     "author": "Shreya N",
     "value": 38,
     "max": 40,
-    "shot": "/shots/sign-of-the-space-times.png"
+    "shot": "/shots/sign-of-the-space-times.jpg"
    },
    {
     "slug": "da-tummmmmm",
@@ -23,7 +23,7 @@
     "author": "yeltsa kcir",
     "value": 37,
     "max": 40,
-    "shot": "/shots/da-tummmmmm.png"
+    "shot": "/shots/da-tummmmmm.jpg"
    },
    {
     "slug": "interactive-black-hole-simulation",
@@ -31,7 +31,7 @@
     "author": "Anarva",
     "value": 37,
     "max": 40,
-    "shot": "/shots/interactive-black-hole-simulation.png"
+    "shot": "/shots/interactive-black-hole-simulation.jpg"
    },
    {
     "slug": "event-horizon",
@@ -39,7 +39,7 @@
     "author": "Parnam Dadwal",
     "value": 37,
     "max": 40,
-    "shot": "/shots/event-horizon.png"
+    "shot": "/shots/event-horizon.jpg"
    },
    {
     "slug": "hawking-radiation-lab-a-interactive-blac",
@@ -47,7 +47,7 @@
     "author": "Briji Issac",
     "value": 36,
     "max": 40,
-    "shot": "/shots/hawking-radiation-lab-a-interactive-blac.png"
+    "shot": "/shots/hawking-radiation-lab-a-interactive-blac.jpg"
    },
    {
     "slug": "black-hole",
@@ -55,7 +55,7 @@
     "author": "sudharsankumar103",
     "value": 36,
     "max": 40,
-    "shot": "/shots/black-hole.png"
+    "shot": "/shots/black-hole.jpg"
    },
    {
     "slug": "real-time-void",
@@ -63,7 +63,7 @@
     "author": "V",
     "value": 36,
     "max": 40,
-    "shot": "/shots/real-time-void.png"
+    "shot": "/shots/real-time-void.jpg"
    },
    {
     "slug": "black-hole-vs-light",
@@ -71,7 +71,7 @@
     "author": "Carlos Zuniga",
     "value": 36,
     "max": 40,
-    "shot": "/shots/black-hole-vs-light.png"
+    "shot": "/shots/black-hole-vs-light.jpg"
    },
    {
     "slug": "wesker-a-real-time-sagittarius-a",
@@ -79,7 +79,7 @@
     "author": "Aryan Amrute",
     "value": 35,
     "max": 40,
-    "shot": "/shots/wesker-a-real-time-sagittarius-a.png"
+    "shot": "/shots/wesker-a-real-time-sagittarius-a.jpg"
    }
   ],
   "design": [
@@ -89,7 +89,7 @@
     "author": "Aryan Amrute",
     "value": 24,
     "max": 25,
-    "shot": "/shots/wesker-a-real-time-sagittarius-a.png"
+    "shot": "/shots/wesker-a-real-time-sagittarius-a.jpg"
    },
    {
     "slug": "a-majestic-blackhole-simulation",
@@ -97,7 +97,7 @@
     "author": "Divya Jaiswal",
     "value": 24,
     "max": 25,
-    "shot": "/shots/a-majestic-blackhole-simulation.jpeg"
+    "shot": "/shots/a-majestic-blackhole-simulation.jpg"
    },
    {
     "slug": "talk-to-this-black-hole-or-it-ll-die",
@@ -105,7 +105,7 @@
     "author": "Bhumik Khatwani",
     "value": 22,
     "max": 25,
-    "shot": "/shots/talk-to-this-black-hole-or-it-ll-die.png"
+    "shot": "/shots/talk-to-this-black-hole-or-it-ll-die.jpg"
    },
    {
     "slug": "einstein-s-trampoline",
@@ -121,7 +121,7 @@
     "author": "Vishwottam Kudekar",
     "value": 20,
     "max": 25,
-    "shot": "/shots/event-horizon-the-black-hole-hypothesis-.png"
+    "shot": "/shots/event-horizon-the-black-hole-hypothesis-.jpg"
    },
    {
     "slug": "gravitational-lensing-simulation-black-h",
@@ -129,7 +129,7 @@
     "author": "Mrunal Shete",
     "value": 20,
     "max": 25,
-    "shot": "/shots/gravitational-lensing-simulation-black-h.png"
+    "shot": "/shots/gravitational-lensing-simulation-black-h.jpg"
    },
    {
     "slug": "blackhole-sim",
@@ -137,7 +137,7 @@
     "author": "Debarun Datta",
     "value": 19,
     "max": 25,
-    "shot": "/shots/blackhole-sim.png"
+    "shot": "/shots/blackhole-sim.jpg"
    },
    {
     "slug": "life-after-him",
@@ -145,7 +145,7 @@
     "author": "preet bodke",
     "value": 19,
     "max": 25,
-    "shot": "/shots/life-after-him.png"
+    "shot": "/shots/life-after-him.jpg"
    },
    {
     "slug": "arepo-blackhole-simulation",
@@ -153,7 +153,7 @@
     "author": "Bhoumik",
     "value": 19,
     "max": 25,
-    "shot": "/shots/arepo-blackhole-simulation.png"
+    "shot": "/shots/arepo-blackhole-simulation.jpg"
    },
    {
     "slug": "hawking",
@@ -171,7 +171,7 @@
     "author": "Bhumik Khatwani",
     "value": 35,
     "max": 35,
-    "shot": "/shots/talk-to-this-black-hole-or-it-ll-die.png"
+    "shot": "/shots/talk-to-this-black-hole-or-it-ll-die.jpg"
    },
    {
     "slug": "wesker-a-real-time-sagittarius-a",
@@ -179,7 +179,7 @@
     "author": "Aryan Amrute",
     "value": 33,
     "max": 35,
-    "shot": "/shots/wesker-a-real-time-sagittarius-a.png"
+    "shot": "/shots/wesker-a-real-time-sagittarius-a.jpg"
    },
    {
     "slug": "black-hole-accertion-disk",
@@ -187,7 +187,7 @@
     "author": "Ayushi Barasiya",
     "value": 30,
     "max": 35,
-    "shot": "/shots/black-hole-accertion-disk.png"
+    "shot": "/shots/black-hole-accertion-disk.jpg"
    },
    {
     "slug": "event-horizon-the-black-hole-hypothesis-",
@@ -195,7 +195,7 @@
     "author": "Vishwottam Kudekar",
     "value": 28,
     "max": 35,
-    "shot": "/shots/event-horizon-the-black-hole-hypothesis-.png"
+    "shot": "/shots/event-horizon-the-black-hole-hypothesis-.jpg"
    },
    {
     "slug": "hawking-radiation-lab-a-interactive-blac",
@@ -203,7 +203,7 @@
     "author": "Briji Issac",
     "value": 27,
     "max": 35,
-    "shot": "/shots/hawking-radiation-lab-a-interactive-blac.png"
+    "shot": "/shots/hawking-radiation-lab-a-interactive-blac.jpg"
    },
    {
     "slug": "da-tummmmmm",
@@ -211,7 +211,7 @@
     "author": "yeltsa kcir",
     "value": 26,
     "max": 35,
-    "shot": "/shots/da-tummmmmm.png"
+    "shot": "/shots/da-tummmmmm.jpg"
    },
    {
     "slug": "silent-superradiance",
@@ -219,7 +219,7 @@
     "author": "Maanya Chhabra",
     "value": 25,
     "max": 35,
-    "shot": "/shots/silent-superradiance.png"
+    "shot": "/shots/silent-superradiance.jpg"
    },
    {
     "slug": "hawking",
@@ -235,7 +235,7 @@
     "author": "s",
     "value": 24,
     "max": 35,
-    "shot": "/shots/the-formation-of-a-black-hole-in-a-nutsh.png"
+    "shot": "/shots/the-formation-of-a-black-hole-in-a-nutsh.jpg"
    },
    {
     "slug": "gravitational-waves",
@@ -243,7 +243,7 @@
     "author": "Parth S",
     "value": 23,
     "max": 35,
-    "shot": "/shots/gravitational-waves.png"
+    "shot": "/shots/gravitational-waves.jpg"
    }
   ]
  },
@@ -255,7 +255,7 @@
     "author": "Caroline Azevedo",
     "value": 32,
     "max": 40,
-    "shot": "/shots/cosmic-encounter-ultra-realistic-self-gr.png"
+    "shot": "/shots/cosmic-encounter-ultra-realistic-self-gr.jpg"
    },
    {
     "slug": "f16-flight-simulator",
@@ -263,7 +263,7 @@
     "author": "Hridayesh Khetan",
     "value": 30,
     "max": 40,
-    "shot": "/shots/f16-flight-simulator.png"
+    "shot": "/shots/f16-flight-simulator.jpg"
    },
    {
     "slug": "physics-that-keeps-jupiters-asteriods-in",
@@ -271,7 +271,7 @@
     "author": "PURVA KAKDE",
     "value": 30,
     "max": 40,
-    "shot": "/shots/physics-that-keeps-jupiters-asteriods-in.jpeg"
+    "shot": "/shots/physics-that-keeps-jupiters-asteriods-in.jpg"
    },
    {
     "slug": "chirp-gravitational-wave-binary-coalesce",
@@ -279,7 +279,7 @@
     "author": "Gheemal Paul",
     "value": 29,
     "max": 40,
-    "shot": "/shots/chirp-gravitational-wave-binary-coalesce.png"
+    "shot": "/shots/chirp-gravitational-wave-binary-coalesce.jpg"
    },
    {
     "slug": "quantum-atom-explorer",
@@ -287,7 +287,7 @@
     "author": "Tapasmita Agarwal",
     "value": 29,
     "max": 40,
-    "shot": "/shots/quantum-atom-explorer.png"
+    "shot": "/shots/quantum-atom-explorer.jpg"
    },
    {
     "slug": "double-pendulum-chaos",
@@ -295,7 +295,7 @@
     "author": "Diptarko Mukherjee",
     "value": 28,
     "max": 40,
-    "shot": "/shots/double-pendulum-chaos.png"
+    "shot": "/shots/double-pendulum-chaos.jpg"
    },
    {
     "slug": "physics-of-chaos",
@@ -303,7 +303,7 @@
     "author": "Karan Gupta",
     "value": 27,
     "max": 40,
-    "shot": "/shots/physics-of-chaos.png"
+    "shot": "/shots/physics-of-chaos.jpg"
    },
    {
     "slug": "cosmic-symphony-interactive-galaxy-colli",
@@ -311,7 +311,7 @@
     "author": "Sushobhan Mishra",
     "value": 27,
     "max": 40,
-    "shot": "/shots/cosmic-symphony-interactive-galaxy-colli.png"
+    "shot": "/shots/cosmic-symphony-interactive-galaxy-colli.jpg"
    },
    {
     "slug": "quasar-quantum-wave-analysis-slit-simula",
@@ -319,7 +319,7 @@
     "author": "ananyaraju.canraju06",
     "value": 26,
     "max": 40,
-    "shot": "/shots/quasar-quantum-wave-analysis-slit-simula.png"
+    "shot": "/shots/quasar-quantum-wave-analysis-slit-simula.jpg"
    },
    {
     "slug": "einstein-sandbox",
@@ -327,7 +327,7 @@
     "author": "Abishag",
     "value": 26,
     "max": 40,
-    "shot": "/shots/einstein-sandbox.png"
+    "shot": "/shots/einstein-sandbox.jpg"
    }
   ],
   "design": [
@@ -337,7 +337,7 @@
     "author": "Caroline Azevedo",
     "value": 23,
     "max": 25,
-    "shot": "/shots/cosmic-encounter-ultra-realistic-self-gr.png"
+    "shot": "/shots/cosmic-encounter-ultra-realistic-self-gr.jpg"
    },
    {
     "slug": "f16-flight-simulator",
@@ -345,7 +345,7 @@
     "author": "Hridayesh Khetan",
     "value": 21,
     "max": 25,
-    "shot": "/shots/f16-flight-simulator.png"
+    "shot": "/shots/f16-flight-simulator.jpg"
    },
    {
     "slug": "physics-that-keeps-jupiters-asteriods-in",
@@ -353,7 +353,7 @@
     "author": "PURVA KAKDE",
     "value": 21,
     "max": 25,
-    "shot": "/shots/physics-that-keeps-jupiters-asteriods-in.jpeg"
+    "shot": "/shots/physics-that-keeps-jupiters-asteriods-in.jpg"
    },
    {
     "slug": "particle-collider",
@@ -369,7 +369,7 @@
     "author": "Tapasmita Agarwal",
     "value": 20,
     "max": 25,
-    "shot": "/shots/quantum-atom-explorer.png"
+    "shot": "/shots/quantum-atom-explorer.jpg"
    },
    {
     "slug": "physics-of-chaos",
@@ -377,7 +377,7 @@
     "author": "Karan Gupta",
     "value": 20,
     "max": 25,
-    "shot": "/shots/physics-of-chaos.png"
+    "shot": "/shots/physics-of-chaos.jpg"
    },
    {
     "slug": "ultimate-spectral-chaos-n-body-problem-b",
@@ -385,7 +385,7 @@
     "author": "Yashoda Bajpai Pathangay",
     "value": 18,
     "max": 25,
-    "shot": "/shots/ultimate-spectral-chaos-n-body-problem-b.png"
+    "shot": "/shots/ultimate-spectral-chaos-n-body-problem-b.jpg"
    },
    {
     "slug": "gravitational-lensing",
@@ -393,7 +393,7 @@
     "author": "Karthiazheni",
     "value": 17,
     "max": 25,
-    "shot": "/shots/gravitational-lensing.png"
+    "shot": "/shots/gravitational-lensing.jpg"
    },
    {
     "slug": "chirp-gravitational-wave-binary-coalesce",
@@ -401,7 +401,7 @@
     "author": "Gheemal Paul",
     "value": 16,
     "max": 25,
-    "shot": "/shots/chirp-gravitational-wave-binary-coalesce.png"
+    "shot": "/shots/chirp-gravitational-wave-binary-coalesce.jpg"
    },
    {
     "slug": "quasar-quantum-wave-analysis-slit-simula",
@@ -409,7 +409,7 @@
     "author": "ananyaraju.canraju06",
     "value": 16,
     "max": 25,
-    "shot": "/shots/quasar-quantum-wave-analysis-slit-simula.png"
+    "shot": "/shots/quasar-quantum-wave-analysis-slit-simula.jpg"
    }
   ],
   "creativity": [
@@ -419,7 +419,7 @@
     "author": "Hridayesh Khetan",
     "value": 34,
     "max": 35,
-    "shot": "/shots/f16-flight-simulator.png"
+    "shot": "/shots/f16-flight-simulator.jpg"
    },
    {
     "slug": "particle-collider",
@@ -435,7 +435,7 @@
     "author": "ananyaraju.canraju06",
     "value": 30,
     "max": 35,
-    "shot": "/shots/quasar-quantum-wave-analysis-slit-simula.png"
+    "shot": "/shots/quasar-quantum-wave-analysis-slit-simula.jpg"
    },
    {
     "slug": "chirp-gravitational-wave-binary-coalesce",
@@ -443,7 +443,7 @@
     "author": "Gheemal Paul",
     "value": 27,
     "max": 35,
-    "shot": "/shots/chirp-gravitational-wave-binary-coalesce.png"
+    "shot": "/shots/chirp-gravitational-wave-binary-coalesce.jpg"
    },
    {
     "slug": "cosmic-encounter-ultra-realistic-self-gr",
@@ -451,7 +451,7 @@
     "author": "Caroline Azevedo",
     "value": 26,
     "max": 35,
-    "shot": "/shots/cosmic-encounter-ultra-realistic-self-gr.png"
+    "shot": "/shots/cosmic-encounter-ultra-realistic-self-gr.jpg"
    },
    {
     "slug": "physics-that-keeps-jupiters-asteriods-in",
@@ -459,7 +459,7 @@
     "author": "PURVA KAKDE",
     "value": 25,
     "max": 35,
-    "shot": "/shots/physics-that-keeps-jupiters-asteriods-in.jpeg"
+    "shot": "/shots/physics-that-keeps-jupiters-asteriods-in.jpg"
    },
    {
     "slug": "einstein-sandbox",
@@ -467,7 +467,7 @@
     "author": "Abishag",
     "value": 25,
     "max": 35,
-    "shot": "/shots/einstein-sandbox.png"
+    "shot": "/shots/einstein-sandbox.jpg"
    },
    {
     "slug": "x-ray-accreting-pulsar-engine",
@@ -475,7 +475,7 @@
     "author": "Abeer",
     "value": 25,
     "max": 35,
-    "shot": "/shots/x-ray-accreting-pulsar-engine.png"
+    "shot": "/shots/x-ray-accreting-pulsar-engine.jpg"
    },
    {
     "slug": "gravitational-lensing",
@@ -483,7 +483,7 @@
     "author": "Karthiazheni",
     "value": 23,
     "max": 35,
-    "shot": "/shots/gravitational-lensing.png"
+    "shot": "/shots/gravitational-lensing.jpg"
    },
    {
     "slug": "double-pendulum-chaos",
@@ -491,7 +491,7 @@
     "author": "Diptarko Mukherjee",
     "value": 20,
     "max": 35,
-    "shot": "/shots/double-pendulum-chaos.png"
+    "shot": "/shots/double-pendulum-chaos.jpg"
    }
   ]
  }
