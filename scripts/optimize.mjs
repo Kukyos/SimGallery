@@ -12,6 +12,13 @@ for (const f of readdirSync(DIR)) {
   before += statSync(src).size;
   const slug = f.replace(/\.[^.]+$/, "");
   const buf = readFileSync(src); // buffer first — sharp can't read+write same path
+  const meta = await sharp(buf).metadata();
+  // Already web-sized: re-encoding would only add generation loss and churn the
+  // git blob, which makes the push huge for no visual gain.
+  if (f.endsWith(".jpg") && meta.format === "jpeg" && meta.width <= 1400) {
+    after += buf.length;
+    continue;
+  }
   const out = await sharp(buf).resize({ width: 1400, withoutEnlargement: true }).jpeg({ quality: 80 }).toBuffer();
   if (!f.endsWith(".jpg")) unlinkSync(src);
   writeFileSync(`${DIR}/${slug}.jpg`, out);
