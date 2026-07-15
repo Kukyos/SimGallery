@@ -1,8 +1,9 @@
 import Link from "next/link";
 import Disk from "@/components/Disk";
 import Catalog from "@/components/Catalog";
-import ScoreBars from "@/components/ScoreBars";
-import { entries, designation, CATEGORY_LABEL, awards, METRIC_LABEL } from "@/lib/data";
+import FadeImg from "@/components/FadeImg";
+import WinnersReveal from "@/components/WinnersReveal";
+import { entries, CATEGORY_LABEL, awards, METRIC_LABEL, type Award } from "@/lib/data";
 
 export default function Home() {
   const winners = entries.filter((e) => e.winner);
@@ -23,24 +24,24 @@ export default function Home() {
         </h1>
         <p className="mx-auto mt-4 max-w-xl text-[15px] leading-relaxed text-dim">
           This is what fell into orbit. One workshop, one week of building, and every simulation
-          catalogued below. Each tile in the disk is a real submission. Hover to stop time, click
+          catalogued below. Each tile in the disk is a real submission. Hover to slow time, click
           to fall in.
         </p>
         <div className="mt-6 font-mono text-[11px] uppercase tracking-[0.25em] text-photon/70">
-          {entries.length} objects · 7 days · 2 categories
+          {entries.length} sims · 7 days · 2 categories
         </div>
       </header>
 
       {/* ——— Winners ——— */}
       <section className="mt-24">
-        <SectionTitle k="01" title="Notable objects" sub="the winners" />
+        <SectionTitle k="01" title="The winners" sub="press to reveal" />
         {winners.length === 0 ? (
           <div className="mt-6 rounded-lg border border-white/10 bg-panel/60 px-5 py-8 text-center">
             <div className="font-mono text-[11px] uppercase tracking-[0.3em] text-ember">
               spectral analysis in progress
             </div>
             <p className="mx-auto mt-3 max-w-md text-sm text-dim">
-              Every submission is being scored on scientific accuracy, design and creativity.
+              Every sim is being scored on scientific accuracy, design and creativity.
               Winners will be catalogued here once the review is done.
             </p>
           </div>
@@ -49,58 +50,20 @@ export default function Home() {
             {(["blackhole", "open"] as const).map((cat) => {
               const w = byCat(cat);
               if (!w.length) return null;
-              return (
-                <div key={cat}>
-                  <div className="font-mono text-[11px] uppercase tracking-[0.3em] text-ember">
-                    {CATEGORY_LABEL[cat]} category
-                  </div>
-                  <div className="mt-4 grid gap-4 md:grid-cols-3">
-                    {w.map((e) => (
-                      <Link
-                        key={e.slug}
-                        href={`/p/${e.slug}`}
-                        className={`group overflow-hidden rounded-lg border bg-panel transition hover:border-photon/60 ${
-                          e.winner === "1"
-                            ? "border-ember/50 shadow-[0_0_40px_rgba(255,158,61,0.12)] md:-translate-y-2"
-                            : "border-white/10"
-                        }`}
-                      >
-                        <div className="flex items-center justify-between border-b border-white/5 px-3 py-2 font-mono text-[10px] tracking-widest">
-                          <span className="text-ember">
-                            {e.winner === "1" ? "★ FIRST" : e.winner === "2" ? "SECOND" : "THIRD"}
-                          </span>
-                          <span className="text-dim">{designation(e.num)}</span>
-                        </div>
-                        {e.shot && (
-                          <div className="aspect-video overflow-hidden bg-black">
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src={e.shot} alt={e.title} className="h-full w-full object-cover" />
-                          </div>
-                        )}
-                        <div className="p-4">
-                          <div className="font-display text-xl text-ink group-hover:text-photon">
-                            {e.title}
-                          </div>
-                          <div className="mt-1 text-xs text-dim">by {e.author}</div>
-                          {e.scores && <ScoreBars scores={e.scores} className="mt-4" />}
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              );
+              return <WinnersReveal key={cat} label={CATEGORY_LABEL[cat]} winners={w} />;
             })}
           </div>
         )}
       </section>
 
-      {/* ——— Per-metric podiums ——— */}
+      {/* ——— Per-metric top 10: brighter = bigger ——— */}
       {winners.length > 0 && (
         <section className="mt-24">
-          <SectionTitle k="02" title="Brightest in band" sub="top 3 per criterion" />
+          <SectionTitle k="02" title="Brightest in band" sub="top 10 per score" />
           <p className="mt-4 max-w-xl text-sm leading-relaxed text-dim">
-            Every object was measured in three bands — scientific accuracy, design &amp; visuals,
-            and creativity. These shone brightest in each, per category.
+            Every sim was scored in three bands — scientific accuracy, design &amp; visuals, and
+            creativity. Here are the ten brightest in each band, per category. The higher the
+            score, the bigger the picture.
           </p>
           <div className="mt-8 space-y-10">
             {(["blackhole", "open"] as const).map((cat) => (
@@ -110,32 +73,7 @@ export default function Home() {
                 </div>
                 <div className="mt-4 grid gap-4 md:grid-cols-3">
                   {(["accuracy", "design", "creativity"] as const).map((m) => (
-                    <div key={m} className="rounded-lg border border-white/10 bg-panel/60 p-4">
-                      <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-photon/80">
-                        {METRIC_LABEL[m]}
-                      </div>
-                      <ol className="mt-3 space-y-2.5">
-                        {awards[cat][m].map((a, i) => (
-                          <li key={a.slug} className="flex items-baseline gap-3">
-                            <span
-                              className={`font-mono text-[11px] ${i === 0 ? "text-ember" : "text-dim"}`}
-                            >
-                              {i + 1}
-                            </span>
-                            <Link
-                              href={`/p/${a.slug}`}
-                              className="min-w-0 flex-1 truncate text-sm text-ink hover:text-photon"
-                              title={a.title}
-                            >
-                              {a.title}
-                            </Link>
-                            <span className="font-mono text-[11px] text-dim">
-                              {a.value}/{a.max}
-                            </span>
-                          </li>
-                        ))}
-                      </ol>
-                    </div>
+                    <BandBoard key={m} label={METRIC_LABEL[m]} list={awards[cat][m]} />
                   ))}
                 </div>
               </div>
@@ -146,18 +84,135 @@ export default function Home() {
 
       {/* ——— Full catalog ——— */}
       <section className="mt-24">
-        <SectionTitle k="03" title="The full catalog" sub={`all ${entries.length} objects`} />
+        <SectionTitle k="03" title="The full catalog" sub={`all ${entries.length} sims`} />
         <div className="mt-6">
           <Catalog entries={entries} />
         </div>
         {lateCount > 0 && (
           <p className="mt-8 font-mono text-[10px] leading-relaxed tracking-wider text-dim/80">
-            * REDSHIFTED: this object&apos;s light reached us after the submission deadline.
+            * REDSHIFTED: this sim&apos;s light reached us after the submission deadline.
             Catalogued anyway.
           </p>
         )}
       </section>
     </main>
+  );
+}
+
+// One band's top 10, sized by rank: #1 full-bleed shot, #2–3 half-width,
+// #4–5 slim strips, #6–10 a plain list. The pyramid IS the ranking.
+function BandBoard({ label, list }: { label: string; list: Award[] }) {
+  const [first, second, third, ...rest] = list;
+  const strips = rest.slice(0, 2); // #4–5
+  const tail = rest.slice(2); // #6–10
+
+  return (
+    <div className="flex flex-col rounded-lg border border-white/10 bg-panel/60 p-4">
+      <div className="flex items-baseline justify-between">
+        <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-photon/80">
+          {label}
+        </div>
+        <div className="font-mono text-[10px] text-dim">/{first?.max}</div>
+      </div>
+
+      {/* #1 — the big plate */}
+      {first && (
+        <Link
+          href={`/p/${first.slug}`}
+          className="group relative mt-3 block overflow-hidden rounded-md border border-ember/40 shadow-[0_0_24px_rgba(255,158,61,0.1)]"
+        >
+          {first.shot && (
+            <div className="aspect-video overflow-hidden bg-black">
+              <FadeImg
+                src={first.shot}
+                alt={first.title}
+                className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+              />
+            </div>
+          )}
+          <div className="flex items-center gap-3 bg-panel px-3 py-2.5">
+            <span className="font-mono text-sm text-ember">1</span>
+            <span className="min-w-0 flex-1 truncate text-sm text-ink group-hover:text-photon" title={first.title}>
+              {first.title}
+            </span>
+            <span className="font-mono text-sm text-ember">{first.value}</span>
+          </div>
+        </Link>
+      )}
+
+      {/* #2–3 — half plates */}
+      <div className="mt-2 grid grid-cols-2 gap-2">
+        {[second, third].filter(Boolean).map((a, i) => (
+          <Link
+            key={a.slug}
+            href={`/p/${a.slug}`}
+            className="group block overflow-hidden rounded-md border border-white/10 hover:border-photon/50"
+          >
+            {a.shot && (
+              <div className="aspect-video overflow-hidden bg-black">
+                <FadeImg
+                  src={a.shot}
+                  alt={a.title}
+                  className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+                />
+              </div>
+            )}
+            <div className="flex items-center gap-2 bg-panel px-2 py-1.5">
+              <span className="font-mono text-[11px] text-dim">{i + 2}</span>
+              <span className="min-w-0 flex-1 truncate text-xs text-ink group-hover:text-photon" title={a.title}>
+                {a.title}
+              </span>
+              <span className="font-mono text-[11px] text-dim">{a.value}</span>
+            </div>
+          </Link>
+        ))}
+      </div>
+
+      {/* #4–5 — slim strips, picture still visible */}
+      <div className="mt-2 grid grid-cols-2 gap-2">
+        {strips.map((a, i) => (
+          <Link
+            key={a.slug}
+            href={`/p/${a.slug}`}
+            className="group block overflow-hidden rounded-md border border-white/10 hover:border-photon/50"
+          >
+            {a.shot && (
+              <div className="aspect-[21/7] overflow-hidden bg-black">
+                <FadeImg
+                  src={a.shot}
+                  alt={a.title}
+                  className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+                />
+              </div>
+            )}
+            <div className="flex items-center gap-2 bg-panel px-2 py-1">
+              <span className="font-mono text-[10px] text-dim">{i + 4}</span>
+              <span className="min-w-0 flex-1 truncate text-[11px] text-ink group-hover:text-photon" title={a.title}>
+                {a.title}
+              </span>
+              <span className="font-mono text-[10px] text-dim">{a.value}</span>
+            </div>
+          </Link>
+        ))}
+      </div>
+
+      {/* #6–10 — the readout */}
+      <ol className="mt-3 space-y-1.5 border-t border-white/5 pt-3">
+        {tail.map((a, i) => (
+          <li key={a.slug} className="flex items-baseline gap-3">
+            <span className="font-mono text-[10px] text-dim">{i + 6}</span>
+            <Link
+              href={`/p/${a.slug}`}
+              className="min-w-0 flex-1 truncate text-xs text-ink/80 hover:text-photon"
+              title={a.title}
+            >
+              {a.title}
+            </Link>
+            <span className="font-mono text-[10px] text-dim">{a.value}</span>
+          </li>
+        ))}
+      </ol>
+    </div>
   );
 }
 

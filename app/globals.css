@@ -42,20 +42,54 @@ body {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
-/* Only the three rings animate — one composited transform each. Animating
-   all 83 tiles individually pegs the GPU (found the hard way). */
-.ring { animation: orbit linear infinite; will-change: transform; }
-.ring-0 { animation-duration: 120s; }
-.ring-1 { animation-duration: 200s; }
-.ring-2 { animation-duration: 320s; }
+/* Only the rings animate — composited transforms. Animating all 83 tiles
+   individually pegs the GPU (found the hard way).
+   Two stacked rotations per ring: .ring is the slow base that never stops,
+   .ring-spin adds the fast component and pauses on hover. Angular velocities
+   add, so hovering decays to the base drift with no position jump —
+   the disk slows down instead of freezing. */
+.ring, .ring-spin { animation: orbit linear infinite; will-change: transform; }
+.ring-0 { animation-duration: 240s; }
+.ring-1 { animation-duration: 400s; }
+.ring-2 { animation-duration: 640s; }
+.ring-0 .ring-spin { animation-duration: 80s; }
+.ring-1 .ring-spin { animation-duration: 133s; }
+.ring-2 .ring-spin { animation-duration: 213s; }
 
-/* Hovering the disk pauses the orbit so a plate can be inspected. */
-.disk:hover .ring {
+.disk:hover .ring-spin {
   animation-play-state: paused;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .ring { animation: none; }
+  .ring, .ring-spin { animation: none; }
+}
+
+/* Winner reveal: cards pop in 3rd → 2nd → 1st; first place gets a flare. */
+@keyframes reveal-pop {
+  0% { opacity: 0; transform: translateY(28px) scale(0.9); }
+  70% { opacity: 1; transform: translateY(-4px) scale(1.02); }
+  100% { opacity: 1; transform: none; }
+}
+@keyframes crown-flash {
+  0% { box-shadow: 0 0 0 0 rgba(255, 158, 61, 0); }
+  35% { box-shadow: 0 0 90px 14px rgba(255, 158, 61, 0.55); }
+  100% { box-shadow: 0 0 40px 0 rgba(255, 158, 61, 0.12); }
+}
+@keyframes seal-pulse {
+  0%, 100% { box-shadow: 0 0 18px rgba(255, 158, 61, 0.25); }
+  50% { box-shadow: 0 0 36px rgba(255, 158, 61, 0.5); }
+}
+.reveal-hidden { opacity: 0; pointer-events: none; }
+.reveal-in { animation: reveal-pop 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+.reveal-first {
+  animation:
+    reveal-pop 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both,
+    crown-flash 1.8s ease-out 0.5s both;
+}
+.seal-btn { animation: seal-pulse 2.2s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal-in, .reveal-first, .seal-btn { animation: none; }
+  .reveal-in, .reveal-first { opacity: 1; }
 }
 
 ::selection {

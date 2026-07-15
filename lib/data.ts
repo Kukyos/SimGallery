@@ -28,7 +28,7 @@ export const CATEGORY_LABEL: Record<string, string> = {
   open: "Open Innovation",
 };
 
-export type Award = { slug: string; title: string; author: string; value: number; max: number };
+export type Award = { slug: string; title: string; author: string; value: number; max: number; shot: string | null };
 export const awards = awardsJson as Record<"blackhole" | "open", Record<"accuracy" | "design" | "creativity", Award[]>>;
 
 export const METRIC_LABEL: Record<string, string> = {
@@ -37,12 +37,12 @@ export const METRIC_LABEL: Record<string, string> = {
   creativity: "Creativity",
 };
 
-// Every band-award placement for one project: [category, metric, place(1-3), value, max]
+// Podium placements (top 3 only — boards go to 10, chips stay special) for one project.
 export const awardsFor = (slug: string) => {
   const hits: { category: string; metric: string; place: number; value: number; max: number }[] = [];
   for (const cat of ["blackhole", "open"] as const)
     for (const m of ["accuracy", "design", "creativity"] as const)
-      awards[cat][m].forEach((a, i) => {
+      awards[cat][m].slice(0, 3).forEach((a, i) => {
         if (a.slug === slug) hits.push({ category: cat, metric: m, place: i + 1, value: a.value, max: a.max });
       });
   return hits;

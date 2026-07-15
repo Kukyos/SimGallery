@@ -84,7 +84,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
       <h1 className="font-display mt-3 text-4xl leading-tight sm:text-5xl">{e.title}</h1>
       {e.tagline && <p className="mt-3 text-lg text-ink/80">{e.tagline}</p>}
       <div className="mt-3 text-sm text-dim">
-        observed by <span className="text-ink">{e.author}</span>
+        built by <span className="text-ink">{e.author}</span>
         {e.observed && <> · first light {new Date(e.observed).toISOString().slice(0, 10)}</>}
       </div>
 
@@ -135,7 +135,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             </div>
           </div>
         ) : (
-          <p className="font-mono text-sm text-dim">AI review pending. This object is still being examined.</p>
+          <p className="font-mono text-sm text-dim">AI review pending. This sim is still being examined.</p>
         )}
       </section>
 

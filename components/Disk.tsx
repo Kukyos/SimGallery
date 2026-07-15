@@ -40,6 +40,7 @@ export default function Disk() {
       >
         {ringTiles.map((tiles, ri) => (
           <div key={ri} className={`ring ring-${ri} absolute left-0 top-0`}>
+            <div className="ring-spin absolute left-0 top-0">
             {tiles.map(({ e, angle, r, size }) => {
               const x = Math.cos((angle * Math.PI) / 180) * r;
               const y = Math.sin((angle * Math.PI) / 180) * r;
@@ -55,6 +56,7 @@ export default function Disk() {
                 </Link>
               );
             })}
+            </div>
           </div>
         ))}
       </div>

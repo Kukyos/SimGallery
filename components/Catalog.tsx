@@ -50,7 +50,7 @@ export default function Catalog({ entries }: { entries: Entry[] }) {
           </div>
         )}
         <div className="ml-auto font-mono text-[11px] tracking-widest text-dim">
-          {shown.length} / {entries.length} OBJECTS
+          {shown.length} / {entries.length} SIMS
         </div>
       </div>
 
@@ -62,7 +62,7 @@ export default function Catalog({ entries }: { entries: Entry[] }) {
 
       {shown.length === 0 && (
         <div className="mt-10 text-center font-mono text-sm text-dim">
-          Nothing in this region of the field. Clear the search to see all {entries.length} objects.
+          Nothing in this region of the field. Clear the search to see all {entries.length} sims.
         </div>
       )}
     </div>
