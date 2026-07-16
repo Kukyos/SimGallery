@@ -364,6 +364,14 @@
     "shot": "/shots/particle-collider.jpg"
    },
    {
+    "slug": "binary-neutron-star-inspiral-kilonova",
+    "title": "Binary Neutron Star Inspiral & Kilonova",
+    "author": "Prakhar Dubey",
+    "value": 21,
+    "max": 25,
+    "shot": "/shots/binary-neutron-star-inspiral-kilonova.jpg"
+   },
+   {
     "slug": "quantum-atom-explorer",
     "title": "Quantum Atom Explorer",
     "author": "Tapasmita Agarwal",
@@ -402,14 +410,6 @@
     "value": 16,
     "max": 25,
     "shot": "/shots/chirp-gravitational-wave-binary-coalesce.jpg"
-   },
-   {
-    "slug": "quasar-quantum-wave-analysis-slit-simula",
-    "title": "QUASAR – Quantum Wave Analysis & Slit Simulation for Advanced Research",
-    "author": "ananyaraju.canraju06",
-    "value": 16,
-    "max": 25,
-    "shot": "/shots/quasar-quantum-wave-analysis-slit-simula.jpg"
    }
   ],
   "creativity": [
@@ -454,6 +454,14 @@
     "shot": "/shots/cosmic-encounter-ultra-realistic-self-gr.jpg"
    },
    {
+    "slug": "binary-neutron-star-inspiral-kilonova",
+    "title": "Binary Neutron Star Inspiral & Kilonova",
+    "author": "Prakhar Dubey",
+    "value": 26,
+    "max": 35,
+    "shot": "/shots/binary-neutron-star-inspiral-kilonova.jpg"
+   },
+   {
     "slug": "physics-that-keeps-jupiters-asteriods-in",
     "title": "physics that keeps jupiters asteriods in place",
     "author": "PURVA KAKDE",
@@ -484,14 +492,6 @@
     "value": 23,
     "max": 35,
     "shot": "/shots/gravitational-lensing.jpg"
-   },
-   {
-    "slug": "double-pendulum-chaos",
-    "title": "Double Pendulum Chaos",
-    "author": "Diptarko Mukherjee",
-    "value": 20,
-    "max": 35,
-    "shot": "/shots/double-pendulum-chaos.jpg"
    }
   ]
  }
